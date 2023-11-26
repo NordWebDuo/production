@@ -13,7 +13,10 @@ import {
   StarIcon,
   CheckIcon,
   BriefcaseIcon,
-  ChatBubbleOvalLeftIcon
+  ChatBubbleOvalLeftIcon,
+  CommandLineIcon,
+  RectangleGroupIcon,
+  PuzzlePieceIcon
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -24,7 +27,7 @@ function HomePage() {
     <div className=" dark">
       <Header />
 
-      <div className="hero-section lg:pt-52 max-lg:pt-44 gap-5 px-5">
+      <div className="hero-section lg:pt-10 max-lg:pt-44 gap-5 px-5 transition">
         <div className="z-10 gap-20 container md:flex flex-row items-center mx-auto">
           <div className="description basis-1/2 max-lg:basis-9/12 ">
             <span className="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
@@ -63,7 +66,7 @@ function HomePage() {
           </div>
         </div>
 
-        <div className="container mx-auto mt-20">
+        <div className="container mx-auto mt-28 max-md:mt-10">
           <div className="section-title text-center">
             <div className="section-subtitle mb-4 inline-block bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
               Subtitle text example
@@ -79,65 +82,62 @@ function HomePage() {
           </div>
 
           <div className="flex max-md:flex-col flex-row gap-5 pt-10">
-            <div className="basis-4/12">
-              <div className="card p-6 rounded-3xl bg-gray-800 hover:bg-emerald-400 hover:text-stone-900 transition-colors duration-500">
-                <PhoneIcon className="w-12 h-12" />
-                <div className="card-title mt-3">
-                  <h2 className="text-lg font-medium ">
-                    Infobox title, click to edit.
-                  </h2>
-                </div>
-                <div className="card-description mt-2">
-                  <p>
-                    Lorem ipsum, or lipsum as it is sometimes known, is dummy
-                    text used in laying out print, graphic or web designs.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="basis-4/12">
-              <div className="card p-6 rounded-3xl bg-gray-800 hover:bg-emerald-400 hover:text-stone-900">
-                <PhoneIcon className="w-12 h-12" />
-                <div className="card-title mt-3">
-                  <h2 className="text-lg font-medium ">
-                    24/7 Customer Support
-                  </h2>
-                </div>
-                <div className="card-description mt-2">
-                  <p>
-                    Lorem ipsum, or lipsum as it is sometimes known, is dummy
-                    text used in laying out print, graphic or web designs.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="basis-4/12">
+            <div className="basis-4/12 group">
               <div className="card p-6 rounded-3xl bg-gray-800 hover:bg-emerald-400 hover:text-stone-900 transition-colors">
-                <PhoneIcon className="w-12 h-12" />
+                <CommandLineIcon className="w-12 h-12 text-emerald-400 group-hover:text-stone-900" />
                 <div className="card-title mt-3">
                   <h2 className="text-lg font-medium ">
-                    Infobox title, click to edit.
+                  Web Development 
                   </h2>
                 </div>
-                <div className="card-description mt-2">
+                <div className="card-description text-slate-400 group-hover:text-slate-700 mt-2">
                   <p>
-                    Lorem ipsum, or lipsum as it is sometimes known, is dummy
-                    text used in laying out print, graphic or web designs.
+                  We create visually appealing and functional websites that reflect your brand and engage your audience.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="basis-4/12 group">
+              <div className="card p-6 rounded-3xl bg-gray-800 hover:bg-emerald-400 hover:text-stone-900 transition-colors">
+                <RectangleGroupIcon className="w-12 h-12 text-emerald-400 group-hover:text-stone-900" />
+                <div className="card-title mt-3">
+                  <h2 className="text-lg font-medium ">
+                  Graphic Design
+                  </h2>
+                </div>
+                <div className="card-description mt-2 text-slate-400 group-hover:text-slate-700">
+                  <p>
+                  Our team of graphic designers crafts unique and compelling designs to capture the essence of your business.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="basis-4/12 group">
+              <div className="card p-6 rounded-3xl bg-gray-800 hover:bg-emerald-400 hover:text-stone-900 transition-colors">
+                <PuzzlePieceIcon className="w-12 h-12 text-emerald-400 group-hover:text-stone-900" />
+                <div className="card-title mt-3">
+                  <h2 className="text-lg font-medium ">
+                  Digital Marketing
+                  </h2>
+                </div>
+                <div className="card-description text-slate-400 group-hover:text-slate-700 mt-2">
+                  <p>
+                  We devise effective digital marketing strategies to increase your online presence and drive conversions.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="about-us flex flex-row max-md:flex-col mt-16 items-center">
+          <div className="about-us flex flex-row max-md:flex-col mt-28 max-md:mt-10 items-center">
             <div className="basis-6/12">
               <Image
                 src="/hero-pic.png"
                 width="460"
                 height="457"
-                className="max-md:w-3/5 object-center"
+                className="max-md:w-full mb-10 object-center"
               ></Image>
             </div>
             <div className="basis-6/12">
@@ -145,16 +145,13 @@ function HomePage() {
                 <div className="section-subtitle mb-4 inline-block bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
                   Subtitle text example
                 </div>
-                <div className="section-title">
-                  <h2 className="font-semibold text-3xl">
+                <div className="section-title w-3/4 max-md:w-full">
+                  <h2 className="leading-10 font-semibold text-3xl max-md:text-2xl">
                     Services Built Specifically for your Business
                   </h2>
                 </div>
-                <div className="section-desc pt-2 text-slate-300">
-                  Text after title text example
-                </div>
-                <div className="about-us-desc leading-7 mt-4">
-                  <p className="mb-2">
+                <div className="about-us-desc leading-7 mt-4 max-md:text-md text-slate-300">
+                  <p className="mb-2 ">
                     Nord Web Duo is an innovative digital agency that
                     specializes in creating high-quality websites and digital
                     marketing strategies designed to drive engagement and
@@ -179,15 +176,15 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="porftolio-selection mt-28">
+          <div className="porftolio-selection mt-28 max-md:mt-10">
             <div className="section-title text-center">
-              <div className="section-subtitle mb-4 inline-block bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+              <div className="section-subtitle mb-4 inline-block bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
                 Subtitle text example
               </div>
               <div className="section-title">
-                <h2 className="font-semibold text-3xl">Our Works</h2>
+                <h2 className="font-semibold text-3xl max-md:text-2xl">Our Works</h2>
               </div>
-              <div className="section-desc pt-2 text-slate-300">
+              <div className="section-desc pt-2 text-slate-300 max-md:text-sm">
                 Save big on high-quality products and services with limited-time
                 offers and discounts across various industries.
               </div>
@@ -262,7 +259,7 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="packages-selection mt-28">
+          <div className="packages-selection mt-28 max-md:mt-10">
             <div className="section-title text-center">
               <div className="section-subtitle mb-4 inline-block bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
                 Subtitle text example
@@ -279,7 +276,7 @@ function HomePage() {
             <div className="flex flex-row max-md:flex-col gap-5 mt-10">
               <div className="basis-4/12 group max-md:basis-full border-2 rounded-2xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
                 <div className="pack-icon">
-                  <StarIcon className="w-16 h-16 group-hover:text-emerald-400" />
+                  <StarIcon className="w-16 h-16 text-emerald-400" />
                 </div>
                 <div className="package-title mt-2 text-xl">Basic</div>
                 <div className="package-price mt-3 font-bold text-3xl">
@@ -327,7 +324,7 @@ function HomePage() {
 
               <div className="basis-4/12 group max-md:basis-full border-2 rounded-2xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
                 <div className="pack-icon">
-                  <BoltIcon className="w-16 h-16 group-hover:text-emerald-400" />
+                  <BoltIcon className="w-16 h-16 text-emerald-400" />
                 </div>
                 <div className="package-title mt-2 text-xl">Advanced</div>
                 <div className="package-price mt-3 font-bold text-3xl">
@@ -375,7 +372,7 @@ function HomePage() {
 
               <div className="basis-4/12 group max-md:basis-full border-2 rounded-2xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
                 <div className="pack-icon">
-                  <BriefcaseIcon className="w-16 h-16 group-hover:text-emerald-400" />
+                  <BriefcaseIcon className="w-16 h-16 text-emerald-400" />
                 </div>
                 <div className="package-title mt-2 text-xl">Premium</div>
                 <div className="package-price mt-3 font-bold text-3xl">

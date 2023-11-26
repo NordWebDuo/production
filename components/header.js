@@ -49,8 +49,8 @@ function Header() {
   }, []);
 
   return (
-    <div className={`fixed w-full transition-all h-30 z-20 top-0 start-0 ${isSticky ? 'sticky-nav' : ''}`}>
-    <div className='container flex h-30 flex-wrap max-lg:px-5 items-center justify-between mx-auto lg:pt-10 max-lg:pt-5'>
+    <div className={`transition mt-10 ${isSticky ? 'fixed transition z-20 top-0 start-0 sticky-nav left-10 right-10 mx-8 px-6 mt-5 bg-slate-700 bg-opacity-50 rounded-3xl border border-white border-opacity-10' : ''}`}>
+    <div className='container flex flex-wrap max-lg:px-5 items-center justify-between mx-auto max-lg:pt-5'>
     <div className='brand'>
        <Link href="/"> <Image src="/nord-web-duo.svg" width="280" height="80" className="max-md:w-52 transition-all" alt='Nord Web Duo'></Image></Link>
         </div>

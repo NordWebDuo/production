@@ -5,6 +5,7 @@ function BlogHome() {
     return(
         <div>
             <Header />
+            aici va fi portfolio
             <Footer />
         </div>
     )
