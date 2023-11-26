@@ -27,10 +27,10 @@ function HomePage() {
     <div className=" dark">
       <Header />
 
-      <div className="hero-section lg:pt-10 max-lg:pt-44 gap-5 px-5 transition">
+      <div className="hero-section lg:pt-10 max-md:pt-20 gap-5 px-5">
         <div className="z-10 gap-20 container md:flex flex-row items-center mx-auto">
           <div className="description basis-1/2 max-lg:basis-9/12 ">
-            <span className="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+            <span className="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded-full dark:bg-green-900 dark:text-green-300">
               Cool Designs, Hot Results
             </span>
             <h1 className="xl:leading-tight lg:leading-tight md:leading-tight mt-4 lg:text-5xl max-lg:text-3xl font-semibold">
@@ -68,7 +68,7 @@ function HomePage() {
 
         <div className="container mx-auto mt-28 max-md:mt-10">
           <div className="section-title text-center">
-            <div className="section-subtitle mb-4 inline-block bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+            <div className="section-subtitle mb-4 inline-block bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
               Subtitle text example
             </div>
             <div className="section-title">
@@ -206,7 +206,7 @@ function HomePage() {
                 <div className="pt-2 text-xl font-semibold group-hover:text-stone-800">
                   <h2>Euro Performance LLC</h2>
                   <Link
-                    className="mt-3 group-hover:text-stone-700 text-stone-200 group-hover:border-stone-700 font-normal text-base hover:border-b pb-1 border-b border-b-transparent inline-flex"
+                    className="mt-3 group-hover:text-stone-700 text-slate-400 group-hover:border-stone-700 font-normal text-base hover:border-b pb-1 border-b border-b-transparent inline-flex"
                     href="/portfolio/1"
                   >
                     View brief <ArrowLongRightIcon className="w-6 h-6 ml-2" />
@@ -274,7 +274,7 @@ function HomePage() {
             </div>
 
             <div className="flex flex-row max-md:flex-col gap-5 mt-10">
-              <div className="basis-4/12 group max-md:basis-full border-2 rounded-2xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
+              <div className="basis-4/12 group max-md:basis-full border-2 rounded-3xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
                 <div className="pack-icon">
                   <StarIcon className="w-16 h-16 text-emerald-400" />
                 </div>
@@ -322,7 +322,7 @@ function HomePage() {
                 </div>
               </div>
 
-              <div className="basis-4/12 group max-md:basis-full border-2 rounded-2xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
+              <div className="basis-4/12 group max-md:basis-full border-2 rounded-3xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
                 <div className="pack-icon">
                   <BoltIcon className="w-16 h-16 text-emerald-400" />
                 </div>
@@ -370,7 +370,7 @@ function HomePage() {
                 </div>
               </div>
 
-              <div className="basis-4/12 group max-md:basis-full border-2 rounded-2xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
+              <div className="basis-4/12 group max-md:basis-full border-2 rounded-3xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
                 <div className="pack-icon">
                   <BriefcaseIcon className="w-16 h-16 text-emerald-400" />
                 </div>

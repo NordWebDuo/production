@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import { ChevronRightIcon, PhoneIcon,EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 function Footer() {
@@ -102,7 +102,7 @@ function Footer() {
                   <ul className="list-none text-base">
                     <li>
                     <Link className="text-slate-400 hover:text-emerald-400" href="mailto:contact@nordwebduo.com"><div className="inline-flex items-center mb-2">
-                        <ChevronRightIcon className="w-3 h-3 mr-2" />
+                        <EnvelopeIcon className="w-5 h-5 mr-2" />
                         contact@nordwebduo.com
                       </div>
                       </Link>
@@ -110,24 +110,16 @@ function Footer() {
                     </li>
                     <li>
                     <Link className="text-slate-400 hover:text-emerald-400" href="tel:+354 785 9001"> <div className="inline-flex items-center mb-2">
-                        <ChevronRightIcon className="w-3 h-3 mr-2" />
+                        <PhoneIcon className="w-5 h-5 mr-2" />
                         +354 785 9001
                       </div>
                       </Link>
                     </li>
                     <li>
-                    <Link className="text-slate-400 hover:text-emerald-400" href="/services">
+                    <Link className="text-slate-400 hover:text-emerald-400" href="/">
                       <div className="inline-flex items-center mb-2">
-                        <ChevronRightIcon className="w-3 h-3 mr-2" />
-                        Services
-                      </div>
-                      </Link>
-                    </li>
-                    <li>
-                    <Link className="text-slate-400 hover:text-emerald-400" href="/contact">
-                      <div className="inline-flex items-center">
-                        <ChevronRightIcon  className="w-3 h-3 mr-2" />
-                        Contact
+                        <MapPinIcon className="w-5 h-5 mr-2" />
+                        Reykjavik, Iceland
                       </div>
                       </Link>
                     </li>
