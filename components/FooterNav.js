@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function Footer() {
     return(
-      <div className="mt-28 max-md:mt-10 container mx-auto px-5">
+      <footer className="mt-28 max-md:mt-10 container mx-auto px-5">
         <div className="flex flex-row max-md:flex-col pb-20 max-md:pb-10 border-b border-white  border-opacity-10">
             <div className="basis-8/12 max-md:basis-full max-md:pb-10">
                 <Image className="mb-5" src="/nord-web-duo.svg" width="250" height="120" alt="Nord Web Duo" />
@@ -131,7 +131,7 @@ function Footer() {
        <div className="copyrights py-6 text-sm text-stone-200">
        © 2023 Nord Web Duo, Inc. All rights reserved.
        </div>
-      </div>
+      </footer>
     )
 }
 

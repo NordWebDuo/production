@@ -1,5 +1,5 @@
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Header from "../components/Navigation";
+import Footer from "../components/FooterNav";
 
 function Contact() {
     return(

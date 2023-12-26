@@ -12,9 +12,9 @@ const onest = Onest({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={onest.className}>
+    <div className={onest.className}>
   <Component {...pageProps} />
-  </main>
+  </div>
   )
 }
 

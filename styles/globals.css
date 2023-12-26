@@ -1,5 +1,17 @@
-@tailwind base;
+@tailwind base; /* Preflight will be injected here */
+
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+
 @tailwind components;
+
 @tailwind utilities;
 
 body {
@@ -31,4 +43,59 @@ body {
   --swiper-navigation-top-offset: 50%;
   --swiper-navigation-sides-offset: 0px;
   --swiper-navigation-color: #34d399;
+}
+
+.description p {
+  margin-bottom: 20px;
+}
+
+.description {
+  @apply text-slate-300
+}
+
+.description a {
+  @apply text-emerald-400 hover:underline underline-offset-2;
+}
+
+.description h2 {
+  @apply font-bold mb-3 text-white
+}
+
+.description h3 {
+  @apply text-white mb-3 font-medium
+}
+
+.description h4 {
+  @apply text-white font-medium
+}
+
+.description ol {
+ list-style-type: decimal;
+ @apply pl-8 mb-5
+}
+
+.description ul li {
+  @apply list-disc ml-7
+}
+
+.description ul {
+  @apply mb-4
+}
+
+.description img{
+@apply rounded-3xl
+}
+
+.description blockquote {
+  @apply border-l-2 border-opacity-60 border-white pl-7 ml-7
+}
+
+.swiper-pagination-bullet {
+  @apply bg-emerald-400 !important;
+}
+
+.heading-subtitle:before {
+  @apply bg-emerald-400 rounded-full w-2.5 h-2.5 absolute left-2.5 top-[11px];
+  content: "";
+
 }

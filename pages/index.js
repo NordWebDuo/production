@@ -1,39 +1,29 @@
-"use client";
-
-import Header from "../components/header";
-import Footer from "../components/footer";
 import Image from "next/image";
+import {PhoneIcon, BoltIcon, ArrowLongRightIcon, StarIcon, CheckIcon, BriefcaseIcon, ChatBubbleOvalLeftIcon, CommandLineIcon, RectangleGroupIcon, PuzzlePieceIcon
+} from "@heroicons/react/24/outline";
+import Link from "next/link";
+import Layout from "@/components/Layout";
+import HeadingTitle from "@/components/HeadingTitle";
+import PortfolioCarousel from "@/components/widgets/PortfolioCarousel";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay,Pagination } from 'swiper/modules';
+import 'swiper/css/pagination';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import {
-  PhoneIcon,
-  BoltIcon,
-  ArrowLongRightIcon,
-  StarIcon,
-  CheckIcon,
-  BriefcaseIcon,
-  ChatBubbleOvalLeftIcon,
-  CommandLineIcon,
-  RectangleGroupIcon,
-  PuzzlePieceIcon
-} from "@heroicons/react/24/outline";
-import Link from "next/link";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
 
 function HomePage() {
   return (
+    <Layout>
     <div className=" dark">
-      <Header />
-
-      <div className="hero-section lg:pt-10 max-md:pt-20 gap-5 px-5">
+      <div className="hero-section">
         <div className="z-10 gap-20 container md:flex flex-row items-center mx-auto">
           <div className="description basis-1/2 max-lg:basis-9/12 ">
             <span className="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded-full dark:bg-green-900 dark:text-green-300">
               Cool Designs, Hot Results
             </span>
-            <h1 className="xl:leading-tight lg:leading-tight md:leading-tight mt-4 lg:text-5xl max-lg:text-3xl font-semibold">
+            <h1 className="xl:leading-tight text-white lg:leading-tight md:leading-tight mt-4 lg:text-5xl max-lg:text-3xl font-semibold">
               We are Digital Creative Web Agency
             </h1>
             <div className="mb-10">
@@ -177,101 +167,23 @@ function HomePage() {
           </div>
 
           <div className="porftolio-selection mt-28 max-md:mt-10">
-            <div className="section-title text-center">
-              <div className="section-subtitle mb-4 inline-block bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
-                Subtitle text example
-              </div>
-              <div className="section-title">
-                <h2 className="font-semibold text-3xl max-md:text-2xl">Our Works</h2>
-              </div>
-              <div className="section-desc pt-2 text-slate-300 max-md:text-sm">
-                Save big on high-quality products and services with limited-time
-                offers and discounts across various industries.
-              </div>
-            </div>
+            <HeadingTitle 
+            subtitle="Crafting Digital Excellence"
+            title="Our Works"
+            description="Explore our diverse portfolio showcasing cutting-edge web design, development, and tailored digital strategies"
+            />
 
-            <div className="flex flex-row max-md:flex-col gap-5 mt-10">
-              <div className="basis-4/12 max-md:basis-full p-8 bg-slate-800 rounded-3xl hover:bg-emerald-400  transition-all group">
-                <Image
-                  className="w-max rounded-2xl mb-4"
-                  src="/project.jpg"
-                  width="500"
-                  height="300"
-                ></Image>
-                <div className="w-title">
-                  <span className="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
-                    Web Development
-                  </span>
-                </div>
-                <div className="pt-2 text-xl font-semibold group-hover:text-stone-800">
-                  <h2>Euro Performance LLC</h2>
-                  <Link
-                    className="mt-3 group-hover:text-stone-700 text-slate-400 group-hover:border-stone-700 font-normal text-base hover:border-b pb-1 border-b border-b-transparent inline-flex"
-                    href="/portfolio/1"
-                  >
-                    View brief <ArrowLongRightIcon className="w-6 h-6 ml-2" />
-                  </Link>
-                </div>
-              </div>
+            <PortfolioCarousel />
 
-              <div className="basis-4/12 max-md:basis-full p-8 bg-slate-800 rounded-3xl hover:bg-emerald-400 transition-all hover:text-stone-900">
-                <Image
-                  className="w-max rounded-2xl mb-4"
-                  src="/project.jpg"
-                  width="500"
-                  height="300"
-                ></Image>
-                <div className="w-title">
-                  <span className="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
-                    Web Development
-                  </span>
-                </div>
-                <div className="pt-2 text-xl font-semibold">
-                  <h2>Euro Performance LLC</h2>
-                </div>
-              </div>
-
-              <div className="basis-4/12 max-md:basis-full p-8 bg-slate-800 rounded-3xl hover:bg-emerald-400 transition-all hover:text-stone-900">
-                <Image
-                  className="w-max rounded-2xl mb-4"
-                  src="/project.jpg"
-                  width="500"
-                  height="300"
-                ></Image>
-                <div className="w-title">
-                  <span className="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
-                    Web Development
-                  </span>
-                </div>
-                <div className="pt-2 text-xl font-semibold">
-                  <h2>Euro Performance LLC</h2>
-                </div>
-              </div>
             </div>
-            <div className="justify-center flex mt-10">
-              <Link href="/portfolio">
-                {" "}
-                <div className="inline-flex items-center gap-1 border-2 text-emerald-400 hover:text-stone-900 border-emerald-400 hover:bg-emerald-500 transition-colors font-medium rounded-full lg:text-md max-lg:text-sm px-6 max-lg:px-4 max-lg:py-2 py-3">
-                  View more
-                  <ArrowLongRightIcon className="w-6 h-6" />
-                </div>
-              </Link>
-            </div>
-          </div>
 
           <div className="packages-selection mt-28 max-md:mt-10">
-            <div className="section-title text-center">
-              <div className="section-subtitle mb-4 inline-block bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
-                Subtitle text example
-              </div>
-              <div className="section-title">
-                <h2 className="font-semibold text-3xl">Unbeatable Packages</h2>
-              </div>
-              <div className="section-desc pt-2 text-slate-300">
-                Save big on high-quality products and services with limited-time
-                offers and discounts across various industries.
-              </div>
-            </div>
+           
+          <HeadingTitle 
+            subtitle="Irresistible Offers"
+            title="Unbeatable Packages"
+            description="Explore our Basic, Advanced, and Premium packages, featuring unbeatable packages on top-notch products and services. Act now to seize limited-time offers."
+            />
 
             <div className="flex flex-row max-md:flex-col gap-5 mt-10">
               <div className="basis-4/12 group max-md:basis-full border-2 rounded-3xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
@@ -421,339 +333,24 @@ function HomePage() {
           </div>
 
           <div className="packages-selection mt-28">
-            <div className="section-title text-center">
-              <div className="section-subtitle mb-4 inline-block bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
-                Subtitle text example
-              </div>
-              <div className="section-title">
-                <h2 className="font-semibold text-3xl">Testimonials</h2>
-              </div>
-              <div className="section-desc pt-2 text-slate-300">
-                Save big on high-quality products and services with limited-time
-                offers and discounts across various industries.
-              </div>
-            </div>
-          </div>
+          <HeadingTitle 
+            subtitle="Our happy Clients"
+            title="Testimonials"
+            description="Explore our Basic, Advanced, and Premium packages, featuring unbeatable packages on top-notch products and services. Act now to seize limited-time offers."
+            />
 
-
-          <Swiper className="mt-10 mySwiper"
-      spaceBetween={20}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
-      breakpoints={{
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-      }}
-      navigation={false} 
-      modules={[Navigation,Autoplay]}
-
-    >
-      <SwiperSlide>
-
-      <div className="basis-4/12 relative group max-md:basis-full border-2 rounded-3xl group border-slate-800 p-8 bg-slate-800 hover:bg-emerald-400 transition-colors">
-             <ChatBubbleOvalLeftIcon className="w-12 h-12 absolute right-7 top-6 opacity-10 group-hover:opacity-30 group-hover:text-stone-800" />
-              <div className="review-avatar">
-                <Image
-                  className="rounded-full mb-4"
-                  src="/review1.png"
-                  width="60"
-                  height="60"
-                />
-              </div>
-              <div className="flex items-center review-stars">
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-              </div>
-              <div className="review-text mt-3 group-hover:text-stone-700 text-base">
-			Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs
-              </div>
-
-              <div className="review-author mt-4">
-                <p className="text-lg font-medium group-hover:text-stone-800">Vadim Godonoaga </p>
-              </div>
-
-        
-            </div>
-
-      </SwiperSlide>
-      <SwiperSlide>
-
-      <div className="basis-4/12 relative group max-md:basis-full border-2 rounded-3xl group border-slate-800 p-8 bg-slate-800 hover:bg-emerald-400 transition-colors">
-             <ChatBubbleOvalLeftIcon className="w-12 h-12 absolute right-7 top-6 opacity-10 group-hover:opacity-30 group-hover:text-stone-800" />
-              <div className="review-avatar">
-                <Image
-                  className="rounded-full mb-4"
-                  src="/review1.png"
-                  width="60"
-                  height="60"
-                  alt="Vadim Godonoga"
-                />
-              </div>
-              <div className="flex items-center review-stars">
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-              </div>
-              <div className="review-text mt-3 group-hover:text-stone-700 text-base">
-			Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs
-              </div>
-
-              <div className="review-author mt-4">
-                <p className="text-lg font-medium group-hover:text-stone-800">Vadim Godonoaga </p>
-              </div>
-
-        
-            </div>
-
-      </SwiperSlide>
-      <SwiperSlide>
-      <div className="basis-4/12 relative group max-md:basis-full border-2 rounded-3xl group border-slate-800 p-8 bg-slate-800 hover:bg-emerald-400 transition-colors">
-             <ChatBubbleOvalLeftIcon className="w-12 h-12 absolute right-7 top-6 opacity-10 group-hover:opacity-30 group-hover:text-stone-800" />
-              <div className="review-avatar">
-                <Image
-                  className="rounded-full mb-4"
-                  src="/review1.png"
-                  width="60"
-                  height="60"
-                />
-              </div>
-              <div className="flex items-center review-stars">
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-3 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-              </div>
-              <div className="review-text mt-3 group-hover:text-stone-700 text-base">
-			Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs
-              </div>
-
-              <div className="review-author mt-4">
-                <p className="text-lg font-medium group-hover:text-stone-800">Vadim Godonoaga </p>
-              </div>
-
-        
-            </div>
-      </SwiperSlide>
-      <SwiperSlide>
-
-      <div className="basis-4/12 relative group max-md:basis-full border-2 rounded-3xl group border-slate-800 p-8 bg-slate-800 hover:bg-emerald-400 transition-colors">
-             <ChatBubbleOvalLeftIcon className="w-12 h-12 absolute right-7 top-6 opacity-10 group-hover:opacity-30 group-hover:text-stone-800" />
-              <div className="review-avatar">
-                <Image
-                  className="rounded-full mb-4"
-                  src="/review1.png"
-                  width="60"
-                  height="60"
-                />
-              </div>
-              <div className="flex items-center review-stars">
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-yellow-300 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-              </div>
-              <div className="review-text mt-3 group-hover:text-stone-700 text-base">
-			Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs
-              </div>
-
-              <div className="review-author mt-4">
-                <p className="text-lg font-medium group-hover:text-stone-800">Vadim Godonoaga </p>
-              </div>
-
-        
-            </div>
-
-      </SwiperSlide>
       
-    </Swiper>
+
+
+          </div>
 
 
         </div>
         
       </div>
-    
-      <Footer />
-
+  
     </div>
+    </Layout>
   );
 }
 export default HomePage;

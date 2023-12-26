@@ -7,6 +7,6 @@ module.exports = nextConfig
 
 module.exports = {
   images: {
-    domains: ['www.panel.nordwebduo.com'],
+    domains: ['127.0.0.1'],
   },
 };
