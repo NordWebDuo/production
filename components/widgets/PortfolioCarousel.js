@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
+import axios from 'axios';
 import PortfolioCard from "./layouts/PortfolioTemplate";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay,Pagination } from 'swiper/modules';
+import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import NoData from "../NoData";
+
 
 function PortfolioCarousel() {
   const [data, setData] = useState(null);
@@ -12,29 +15,22 @@ function PortfolioCarousel() {
 
   useEffect(() => {
     const fetchProfileData = async () => {
-      const reqOptions = {
-        headers: {
-          accept: "application/json",
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
-        },
-        revalidate: 60,
-      };
-
       try {
-        const response = await fetch(
+        const response = await axios.get(
           `${process.env.NEXT_PUBLIC_STRAPI_URL}/portfolios?populate=*`,
-          reqOptions
+          {
+            headers: {
+              Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
+            },
+          }
         );
 
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-
-        const fetchedData = await response.json();
-        setData(fetchedData);
+        setData(response.data);
         setLoading(false);
       } catch (error) {
         setLoading(false);
+        // Gestionarea erorii
+        console.error('Error fetching data:', error);
       }
     };
 
@@ -42,41 +38,28 @@ function PortfolioCarousel() {
   }, []);
 
   if (isLoading) return <p>Loading...</p>;
-  if (!data || !data.data || data.length === 0) return <p>No data available</p>;
+  if (!data?.data?.length) return <NoData />;
+
   return (
-    <>
-    <Swiper className="mt-10 lg:mt-10 mySwiper"
-spaceBetween={30}
-pagination={{
-  clickable: true,
-}}
-autoplay={{
-  delay: 2500,
-  disableOnInteraction: false,
-}}
-breakpoints={{
-  640: {
-    slidesPerView: 2,
-    spaceBetween: 20,
-  },
-  768: {
-    slidesPerView: 2,
-    spaceBetween: 20,
-  },
-  1024: {
-    slidesPerView: 3,
-    spaceBetween: 20,
-  },
-}}
-navigation={false} 
-modules={[Navigation,Autoplay,Pagination]}>
-      {data.data.map((portfolio) => (
-      <SwiperSlide key={portfolio.id}>  
-        <PortfolioCard portfolio={portfolio} />
-      </SwiperSlide>
+    <Swiper
+      className="mt-10 lg:mt-10 mySwiper"
+      spaceBetween={30}
+      pagination={{ clickable: true }}
+      autoplay={{ delay: 2500, disableOnInteraction: false }}
+      breakpoints={{
+        640: { slidesPerView: 2, spaceBetween: 20 },
+        768: { slidesPerView: 2, spaceBetween: 20 },
+        1024: { slidesPerView: 3, spaceBetween: 20 },
+      }}
+      navigation={false}
+      modules={[Navigation, Autoplay, Pagination]}
+    >
+      {data.data.map((portfolio, index) => (
+        <SwiperSlide key={index}>
+          <PortfolioCard portfolio={portfolio} />
+        </SwiperSlide>
       ))}
-     </Swiper>
-    </>
+    </Swiper>
   );
 }
 

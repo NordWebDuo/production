@@ -1,48 +1,47 @@
 import Image from "next/image";
-import {PhoneIcon, BoltIcon, ArrowLongRightIcon, StarIcon, CheckIcon, BriefcaseIcon, ChatBubbleOvalLeftIcon, CommandLineIcon, RectangleGroupIcon, PuzzlePieceIcon
+import {PhoneIcon, BoltIcon, CommandLineIcon, RectangleGroupIcon, PuzzlePieceIcon, ArrowUpRightIcon, ChatBubbleOvalLeftEllipsisIcon
 } from "@heroicons/react/24/outline";
-import Link from "next/link";
 import Layout from "@/components/Layout";
 import HeadingTitle from "@/components/HeadingTitle";
 import PortfolioCarousel from "@/components/widgets/PortfolioCarousel";
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay,Pagination } from 'swiper/modules';
-import 'swiper/css/pagination';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import ReviewsCarousel from "@/components/widgets/ReviewsCarousel";
+import DefaultButton from "@/components/widgets/buttons/DefaultButton";
+import Borderedbutton from "@/components/widgets/buttons/BorderedButton";
+import PackageList from "@/components/widgets/PackageList";
 
 
 function HomePage() {
   return (
     <Layout>
-    <div className=" dark">
-      <div className="hero-section">
-        <div className="z-10 gap-20 container md:flex flex-row items-center mx-auto">
+    <div className="main">
+      <div className="all">
+      
+        <div className="container gap-20 md:flex flex-row items-center mx-auto z-auto"> 
+        <div className="hero-section"></div>
           <div className="description basis-1/2 max-lg:basis-9/12 ">
-            <span className="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded-full dark:bg-green-900 dark:text-green-300">
-              Cool Designs, Hot Results
-            </span>
+          <div className="relative -z-[1] heading-subtitle inline-block bg-emerald-400 bg-opacity-10 px-3 py-1 rounded-full text-white mb-1">
+                <span className="ml-4 text-sm">Cool Designs, Hot results.</span>
+              </div>
             <h1 className="xl:leading-tight text-white lg:leading-tight md:leading-tight mt-4 lg:text-5xl max-lg:text-3xl font-semibold">
-              We are Digital Creative Web Agency
+              We are Digital Creative<br></br> Web Agency
             </h1>
             <div className="mb-10">
-              <p className="pt-5 mb-10 max-lg:mb-5">
-                Writer is designed to help you generate high-quality texts
-                instantly Based on WoodMart theme 2023 WooCommerce Themes.
+              <p className="leading-7 pt-5 mb-10 max-lg:mb-5 text-slate-300">
+                Innovative digital agency that specializes in creating high-quality websites and digital marketing strategies designed to drive engagement and increase conversions.
               </p>
-              <div className="flex gap-3">
-              <Link href="/contact">
-              <div className="text-stone-900 inline-flex items-center gap-1 border-2 border-emerald-400 hover:border-emerald-500 bg-emerald-400 hover:bg-emerald-500 transition-colors font-medium rounded-full lg:text-md max-lg:text-sm px-6 py-3 max-lg:px-4 max-lg:py-2  me-2 mb-2 ">
-                <PhoneIcon className="w-6 h-6" /> Contact Us
-              </div>
-              </Link>
-              <Link href="/portfolio">
-              <div className=" inline-flex items-center gap-1 border-2 text-emerald-400 hover:text-stone-900 border-emerald-400 hover:bg-emerald-500 transition-colors font-medium rounded-full lg:text-md max-lg:text-sm px-6 max-lg:px-4 max-lg:py-2 py-3 me-2 mb-2 ">
-                <BoltIcon className="w-6 h-6" />
-                View Portfolio
-              </div>
-              </Link>
+              <div className="flex gap-3 mt-8">
+              <DefaultButton
+                Source={"/contact"}
+                Title={"Contact Us"}
+                Icon={PhoneIcon}
+              />
+
+              <Borderedbutton
+                Title={"View Portfolio"}
+                Source={"/portfolio"}
+                Icon={BoltIcon}
+              />
+
               </div>
             </div>
           </div>
@@ -57,23 +56,17 @@ function HomePage() {
         </div>
 
         <div className="container mx-auto mt-28 max-md:mt-10">
-          <div className="section-title text-center">
-            <div className="section-subtitle mb-4 inline-block bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
-              Subtitle text example
-            </div>
-            <div className="section-title">
-              <h2 className="font-semibold text-2xl">
-                Services Built Specifically for your Business
-              </h2>
-            </div>
-            <div className="section-desc pt-2 text-slate-300">
-              Text after title text example
-            </div>
-          </div>
+          
+        <HeadingTitle 
+            subtitle="Crafting Digital Excellence"
+            title="Services Built Specifically for your Business"
+            description="Explore our diverse portfolio showcasing cutting-edge web design, development, and tailored digital strategies"
+            />
+          
 
           <div className="flex max-md:flex-col flex-row gap-5 pt-10">
             <div className="basis-4/12 group">
-              <div className="card p-6 rounded-3xl bg-gray-800 hover:bg-emerald-400 hover:text-stone-900 transition-colors">
+              <div className="card p-6 rounded-3xl bg-slate-800 hover:bg-emerald-400 hover:text-stone-900 transition-colors">
                 <CommandLineIcon className="w-12 h-12 text-emerald-400 group-hover:text-stone-900" />
                 <div className="card-title mt-3">
                   <h2 className="text-lg font-medium ">
@@ -89,7 +82,7 @@ function HomePage() {
             </div>
 
             <div className="basis-4/12 group">
-              <div className="card p-6 rounded-3xl bg-gray-800 hover:bg-emerald-400 hover:text-stone-900 transition-colors">
+              <div className="card p-6 rounded-3xl bg-slate-800 hover:bg-emerald-400 hover:text-stone-900 transition-colors">
                 <RectangleGroupIcon className="w-12 h-12 text-emerald-400 group-hover:text-stone-900" />
                 <div className="card-title mt-3">
                   <h2 className="text-lg font-medium ">
@@ -105,7 +98,7 @@ function HomePage() {
             </div>
 
             <div className="basis-4/12 group">
-              <div className="card p-6 rounded-3xl bg-gray-800 hover:bg-emerald-400 hover:text-stone-900 transition-colors">
+              <div className="card p-6 rounded-3xl bg-slate-800 hover:bg-emerald-400 hover:text-stone-900 transition-colors">
                 <PuzzlePieceIcon className="w-12 h-12 text-emerald-400 group-hover:text-stone-900" />
                 <div className="card-title mt-3">
                   <h2 className="text-lg font-medium ">
@@ -132,9 +125,9 @@ function HomePage() {
             </div>
             <div className="basis-6/12">
               <div className="section-title">
-                <div className="section-subtitle mb-4 inline-block bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
-                  Subtitle text example
-                </div>
+              <div className="relative -z-[1] heading-subtitle inline-block bg-emerald-400 bg-opacity-10 px-3 py-1 rounded-full text-white mb-3">
+                <span className="ml-4 text-sm">About Us </span>
+              </div>
                 <div className="section-title w-3/4 max-md:w-full">
                   <h2 className="leading-10 font-semibold text-3xl max-md:text-2xl">
                     Services Built Specifically for your Business
@@ -155,13 +148,20 @@ function HomePage() {
                     on its ability to deliver exceptional results on time and
                     within budget.
                   </p>
-                  <button
-                    type="button"
-                    className="mt-5 text-stone-900 inline-flex items-center gap-1 border-2 border-emerald-400 hover:border-emerald-500 bg-emerald-400 hover:bg-emerald-500 transition-colors font-medium rounded-full lg:text-md max-lg:text-sm px-6 py-3 max-lg:px-4 max-lg:py-2  me-2 mb-2 "
-                  >
-                    <PhoneIcon className="w-6 h-6" /> Contact Us
-                  </button>
+                 
                 </div>
+                <div className="mt-8 flex gap-3">
+                <DefaultButton
+                Source={"/about-us"}
+                Title={"Read More"}
+                Icon={ArrowUpRightIcon}
+              />
+              <Borderedbutton
+                Title={"Contact Us"}
+                Source={"/portfolio"}
+                Icon={ChatBubbleOvalLeftEllipsisIcon}
+              />
+              </div>
               </div>
             </div>
           </div>
@@ -185,162 +185,19 @@ function HomePage() {
             description="Explore our Basic, Advanced, and Premium packages, featuring unbeatable packages on top-notch products and services. Act now to seize limited-time offers."
             />
 
-            <div className="flex flex-row max-md:flex-col gap-5 mt-10">
-              <div className="basis-4/12 group max-md:basis-full border-2 rounded-3xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
-                <div className="pack-icon">
-                  <StarIcon className="w-16 h-16 text-emerald-400" />
-                </div>
-                <div className="package-title mt-2 text-xl">Basic</div>
-                <div className="package-price mt-3 font-bold text-3xl">
-                  200.000<span className="text-xl">/kr</span>
-                </div>
-                <div className="package-list mt-4">
-                  <ul className="list-none text-slate-300">
-                    <li>
-                      <div className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2" />A custom-designed
-                        website
-                      </div>
-                    </li>
-                    <li>
-                      <div className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2" />
-                        Basic SEO services
-                      </div>
-                    </li>
-                    <li>
-                 
-                      <div className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2" />
-                        Social media setup
-                      </div>
-                    </li>
-                    <li>
-                 
-                      <div className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2" />
-                        SSL
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div className="call-btn mt-6">
-                  <Link href="/get-started">
-                    <div className="inline-flex items-center gap-1 border-2 text-emerald-400 group-hover:text-stone-900 border-emerald-400 group-hover:bg-emerald-500 transition-colors font-medium rounded-full lg:text-md max-lg:text-sm px-6 max-lg:px-4 max-lg:py-2 py-3">
-                      Get Started
-                      <ArrowLongRightIcon className="w-6 h-6" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
+           <PackageList />
 
-              <div className="basis-4/12 group max-md:basis-full border-2 rounded-3xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
-                <div className="pack-icon">
-                  <BoltIcon className="w-16 h-16 text-emerald-400" />
-                </div>
-                <div className="package-title mt-2 text-xl">Advanced</div>
-                <div className="package-price mt-3 font-bold text-3xl">
-                  400.000<span className="text-xl">/kr</span>
-                </div>
-                <div className="package-list mt-4">
-                  <ul className="list-none text-slate-300">
-                    <li>
-                      <div className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2" />A custom-designed
-                        website
-                      </div>
-                    </li>
-                    <li>
-                      <div className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2" />
-                        Basic SEO services
-                      </div>
-                    </li>
-                    <li>
-
-                      <div className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2" />
-                        Social media setup
-                      </div>
-                    </li>
-                    <li>
-                     
-                      <div className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2" />
-                        SSL
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div className="call-btn mt-6">
-                  <Link href="/get-started">
-                    <div className="inline-flex items-center gap-1 border-2 text-emerald-400 group-hover:text-stone-900 border-emerald-400 group-hover:bg-emerald-500 transition-colors font-medium rounded-full lg:text-md max-lg:text-sm px-6 max-lg:px-4 max-lg:py-2 py-3">
-                      Get Started
-                      <ArrowLongRightIcon className="w-6 h-6" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="basis-4/12 group max-md:basis-full border-2 rounded-3xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
-                <div className="pack-icon">
-                  <BriefcaseIcon className="w-16 h-16 text-emerald-400" />
-                </div>
-                <div className="package-title mt-2 text-xl">Premium</div>
-                <div className="package-price mt-3 font-bold text-3xl">
-                  600.000<span className="text-xl">/kr</span>
-                </div>
-                <div className="package-list mt-4">
-                  <ul className="list-none text-slate-300">
-                    <li>
-                      <div className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2" />A custom-designed
-                        website
-                      </div>
-                    </li>
-                    <li>
-                      <div className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2" />
-                        Basic SEO services
-                      </div>
-                    </li>
-                    <li>
-                      {" "}
-                      <div className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2" />
-                        Social media setup
-                      </div>
-                    </li>
-                    <li>
-                      {" "}
-                      <div className="inline-flex items-center">
-                        <CheckIcon className="w-5 h-5 mr-2" />
-                        SSL
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div className="call-btn mt-6">
-                  <Link href="/get-started">
-                    <div className="inline-flex items-center gap-1 border-2 text-emerald-400 group-hover:text-stone-900 border-emerald-400 group-hover:bg-emerald-500 transition-colors font-medium rounded-full lg:text-md max-lg:text-sm px-6 max-lg:px-4 max-lg:py-2 py-3">
-                      Get Started
-                      <ArrowLongRightIcon className="w-6 h-6" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
           </div>
-
-          <div className="packages-selection mt-28">
+           
+          <div className="packages-selection mt-28 max-md:mt-10">
           <HeadingTitle 
             subtitle="Our happy Clients"
             title="Testimonials"
             description="Explore our Basic, Advanced, and Premium packages, featuring unbeatable packages on top-notch products and services. Act now to seize limited-time offers."
             />
-
-      
-
+     <div className="mt-10">
+         <ReviewsCarousel />      
+</div>
 
           </div>
 
