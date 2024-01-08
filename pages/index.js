@@ -1,12 +1,13 @@
+"use client";
+
 import Image from "next/image";
-import {PhoneIcon, BoltIcon, CommandLineIcon, RectangleGroupIcon, PuzzlePieceIcon, ArrowUpRightIcon, ChatBubbleOvalLeftEllipsisIcon
+import { BoltIcon, CommandLineIcon, RectangleGroupIcon, PuzzlePieceIcon, ArrowUpRightIcon, ChatBubbleOvalLeftEllipsisIcon
 } from "@heroicons/react/24/outline";
 import Layout from "@/components/Layout";
 import HeadingTitle from "@/components/HeadingTitle";
 import PortfolioCarousel from "@/components/widgets/PortfolioCarousel";
 import ReviewsCarousel from "@/components/widgets/ReviewsCarousel";
 import DefaultButton from "@/components/widgets/buttons/DefaultButton";
-import Borderedbutton from "@/components/widgets/buttons/BorderedButton";
 import PackageList from "@/components/widgets/PackageList";
 
 
@@ -29,17 +30,22 @@ function HomePage() {
               <p className="leading-7 pt-5 mb-10 max-lg:mb-5 text-slate-300">
                 Innovative digital agency that specializes in creating high-quality websites and digital marketing strategies designed to drive engagement and increase conversions.
               </p>
-              <div className="flex gap-3 mt-8">
+              <div className="flex gap-5 mt-8">
               <DefaultButton
                 Source={"/contact"}
                 Title={"Contact Us"}
-                Icon={PhoneIcon}
+                Icon={ChatBubbleOvalLeftEllipsisIcon}
+                color="default"
+           
+                iconPosition="left"
               />
 
-              <Borderedbutton
-                Title={"View Portfolio"}
+              <DefaultButton
                 Source={"/portfolio"}
+                Title={"View Portfolio"}
                 Icon={BoltIcon}
+                iconPosition="left"
+                color="bordered"
               />
 
               </div>
@@ -73,7 +79,7 @@ function HomePage() {
                   Web Development 
                   </h2>
                 </div>
-                <div className="card-description text-slate-400 group-hover:text-slate-700 mt-2">
+                <div className="card-description text-slate-400 group-hover:text-emerald-800 mt-2">
                   <p>
                   We create visually appealing and functional websites that reflect your brand and engage your audience.
                   </p>
@@ -89,7 +95,7 @@ function HomePage() {
                   Graphic Design
                   </h2>
                 </div>
-                <div className="card-description mt-2 text-slate-400 group-hover:text-slate-700">
+                <div className="card-description mt-2 text-slate-400 group-hover:text-emerald-800">
                   <p>
                   Our team of graphic designers crafts unique and compelling designs to capture the essence of your business.
                   </p>
@@ -105,7 +111,7 @@ function HomePage() {
                   Digital Marketing
                   </h2>
                 </div>
-                <div className="card-description text-slate-400 group-hover:text-slate-700 mt-2">
+                <div className="card-description text-slate-400 group-hover:text-emerald-800 mt-2">
                   <p>
                   We devise effective digital marketing strategies to increase your online presence and drive conversions.
                   </p>
@@ -152,14 +158,21 @@ function HomePage() {
                 </div>
                 <div className="mt-8 flex gap-3">
                 <DefaultButton
-                Source={"/about-us"}
+                Source={"/about"}
                 Title={"Read More"}
                 Icon={ArrowUpRightIcon}
+                color="default"
+                iconPosition="right"
               />
-              <Borderedbutton
+
+              
+
+              <DefaultButton
+                Source={"/contact"}
                 Title={"Contact Us"}
-                Source={"/portfolio"}
                 Icon={ChatBubbleOvalLeftEllipsisIcon}
+                iconPosition="left"
+                color="bordered"
               />
               </div>
               </div>

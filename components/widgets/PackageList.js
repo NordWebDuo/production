@@ -49,7 +49,7 @@ function PackageList() {
 
                 return (
                
-        <div className="group max-md:basis-full border-2 rounded-3xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
+        <div key={index} className="group max-md:basis-full border-2 rounded-3xl border-slate-800 p-8 hover:border-emerald-400 transition-colors">
                 <div className="pack-icon mb-5">
                
                 {IconComponent && <IconComponent className="w-16 h-16 text-emerald-400" />}

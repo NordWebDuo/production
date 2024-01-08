@@ -6,7 +6,7 @@ import SidebarMobile from './SidebarMenu';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import DefaultButton from './widgets/buttons/DefaultButton';
-import { ChatBubbleBottomCenterIcon } from '@heroicons/react/24/outline';
+import { ChatBubbleBottomCenterIcon, ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/react/24/outline';
 
 
 function Header() {
@@ -37,18 +37,21 @@ function Header() {
   }, []);
 
   return (
-    <nav className={`fixed w-full ${isSticky ? 'fixed z-20 top-0 start-0  sticky-nav px-6 max-md:px-0 max-md:py-2 py-3 mt-0 bg-slate-700 bg-opacity-50 border-opacity-10' : 'top-5'}`}>
+    <nav className={`fixed w-full ${isSticky ? 'fixed z-50 top-0 start-0  sticky-nav px-6 max-md:px-0 max-md:py-2 py-3 mt-0 bg-slate-900 shadow-xl bg-opacity-50 border-opacity-10' : 'top-5 z-50'}`}>
     <div className='container flex max-lg:px-5 items-center justify-between mx-auto '>
     <div className='brand'>
-       <Link href="/"> <Image src="/nord-web-duo.svg" width={`${isSticky ? '180' : '280'}`} height="80" className="max-md:w-48 transition-all" alt='Nord Web Duo'></Image></Link>
+       <Link href="/"> <Image src="/nord-web-duo.svg" width={`${isSticky ? '180' : '280'}`} height="80" className="max-md:w-48 transition-all" alt="Nord Web Duo" priority /></Link>
         </div>
         <div className='lg:order-2 flex gap-2'>
-         
+    <div className='call-to-action-desktop hidden sm:block'>
         <DefaultButton
                 Source={"/contact"}
                 Title={"Let's Talk"}
-                Icon={ChatBubbleBottomCenterIcon}
-         />
+                Icon={ChatBubbleOvalLeftEllipsisIcon}
+                
+                iconPosition="left"
+              />
+              </div>
 
 <SidebarMobile />
 

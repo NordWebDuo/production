@@ -23,11 +23,12 @@ const BlogList = ({blogs}) => {
     return (
 
       <Layout pageTitle="Blog">
-
         <TitleDesc 
         Title="Our Blog"
         PageDescription="We use an agile approach to test assumptions and connect with the needs of your audience early and often."
         />
+
+<div className="hero-section-alternative"></div>
         
         <div className="container mx-auto mt-14">
             

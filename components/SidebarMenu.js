@@ -35,13 +35,13 @@ function SidebarMobile() {
   };
 
   return (
-    <div className='relative'>
+    <div className='relative z-50'>
       {/* Butonul pentru deschiderea/închiderea meniului cu iconițe */}
       <button onClick={toggleMenu} className=" lg:hidden mt-2 flex items-center justify-center">
         {buttonIcon}
       </button>
 
-      <div className={`fixed z-50 top-0 left-0 w-4/6 h-full bg-gray-800 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0 z-50' : '-translate-x-full'}`} ref={menuRef}>
+      <div className={`fixed top-0 left-0 w-4/6 h-full bg-slate-800 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0 z-50' : '-translate-x-full'}`} ref={menuRef}>
     
         <div className='p-5'>
         <Link href="/"> <Image src="/nord-web-duo.svg" width="290" height="80" alt='Nord Web Duo'></Image></Link>

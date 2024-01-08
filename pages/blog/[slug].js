@@ -18,6 +18,8 @@ const BlogSlug = ({ blog }) => {
 
   return (
     <Layout pageTitle={blog.attributes.Title}>
+
+<div className="hero-section-alternative"></div>
       
         <div className='pt-32 pb-32 md:pt-60 md:pb-60 rounded-3xl container mx-auto' style={{ 
            backgroundImage: `url(http://localhost:1337${blog.attributes.cover.data.attributes.url})`,

@@ -1,14 +1,51 @@
 "use client";
 import Image from "next/image";
-import { ChevronRightIcon, PhoneIcon,EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import { ChevronRightIcon, PhoneIcon,EnvelopeIcon, MapPinIcon, ChatBubbleLeftRightIcon, ChatBubbleOvalLeftEllipsisIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import DefaultButton from "./widgets/buttons/DefaultButton";
 
 function Footer() {
     return(
-      <footer className="mt-28 max-md:mt-10 container mx-auto px-5">
+     <>
+      <div className="call-to-action bg-emerald-400 mt-28">
+     <div className="container mx-auto py-14 max-lg:px-5"> 
+      <div className="flex flex-col md:flex-row">
+       <div className="flex flex-1 gap-4 lg:gap-7 items-center mb-8 md:mb-0">
+
+       <div className="icon-cat"> <ChatBubbleLeftRightIcon className="w-12 h-12 md:w-16 md:h-16 text-emerald-900" /></div>
+        <div className="description-cta space-y-1">
+      <p className="text-xl lg:text-3xl mb-2 font-semibold text-emerald-900">Let's talk about your project</p>
+        <p className="text-emerald-700 text-sm lg:text-base">Discover how we can bring innovation to your ideas, together.</p>
+        </div>
+       </div>
+
+       <div className="flex items-center gap-5">
+       <div className="md:-order-none order-2"> 
+       <Link href="tel:+354 785 9001"> <h3 className="text-base md:text-lg font-semibold text-emerald-900 hover:underline hover:underline-offset-4 transition-all">+354 785 9001</h3></Link>
+       </div> 
+        <DefaultButton
+                Source={"/contact"}
+                Title={"Contact Us"}
+                Icon={ChatBubbleOvalLeftEllipsisIcon}
+                color="dark"
+           
+                iconPosition="left"
+              />
+        </div>
+
+       <div>
+         
+       </div>
+      </div>
+     </div>
+      </div>
+
+
+      <footer className="container mx-auto mt-14 max-md:mt-10 max-lg:px-5">
+        
         <div className="flex flex-row max-md:flex-col pb-20 max-md:pb-10 border-b border-white  border-opacity-10">
             <div className="basis-8/12 max-md:basis-full max-md:pb-10">
-                <Image className="mb-5" src="/nord-web-duo.svg" width="250" height="120" alt="Nord Web Duo" />
+                <Image className="mb-5" src="/nord-web-duo.svg" width="250" height="120" alt="Nord Web Duo" priority />
                 <p className="w-2/3 max-md:w-full mb-5">Nord Web Duo is an innovative digital agency that specializes in creating high-quality websites</p>
                 <div className="flex gap-3">
                 <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
@@ -132,6 +169,7 @@ function Footer() {
        © 2023 Nord Web Duo, Inc. All rights reserved.
        </div>
       </footer>
+      </>
     )
 }
 

@@ -20,7 +20,7 @@ const Layout = ({ children, pageTitle, pageDescription, ogPageTitle,metaImage })
     </Head>
     <Header />
     <main>
-        <div className="pt-36 md:pt-30 lg:pt-52 gap-5 px-5">{children}</div>
+        <div className="pt-36 md:pt-30 lg:pt-52 px-5">{children}</div>
     </main>
     <Footer />
     </>

@@ -38,6 +38,9 @@ const handleViewMore = () => {
         pageDescription="Aceasta este pagina titlu"
         ogPageTitle="Portfolio | NordWebDuo"
         >
+
+<div className="hero-section-alternative"></div>
+
             <TitleDesc 
                 Title="Our Works"
                 PageDescription="People friendly digital experiences"

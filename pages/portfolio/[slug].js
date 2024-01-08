@@ -29,6 +29,7 @@ const PortfolioSlug = ({ portfolio }) => {
     metaImage={'http://127.0.0.1:1337' + portfolio.attributes.full_image.data.attributes.url}
     >
       
+      <div className="hero-section-alternative"></div>
         <div className='container mx-auto'>
 
         <TitleDesc 
