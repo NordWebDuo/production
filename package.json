@@ -19,6 +19,8 @@
     "normalize.css": "^8.0.1",
     "react": "latest",
     "react-dom": "latest",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "sanitize-html": "^2.11.0",
     "swiper": "^11.0.5",
     "swr": "^2.2.4"

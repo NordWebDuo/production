@@ -16,6 +16,20 @@ const handleViewMore = () => {
     setDisplayCount(displayCount + 3); // Poți ajusta numărul de elemente afișate după necesități
 };
 
+if (!categories || !portfolios) {
+    return (
+        <Layout pageTitle="Our Works">
+        <TitleDesc 
+            Title="Our Works"
+            PageDescription="We use an agile approach to test assumptions and connect with the needs of your audience early and often."
+        />
+        <div className="container mx-auto mt-14">
+            <p className="text-center text-rose-500">Oops! There was an error fetching the portfolio posts. Please try again later.</p>
+        </div>
+    </Layout>
+    );
+}
+
 
     const handleFilter = (category) => {
         setSelectedCategory(category);
@@ -75,6 +89,9 @@ const handleViewMore = () => {
 export default PortfolioList;
 
 export async function getStaticProps() {
+
+    
+
     const reqOptions = {
         headers: {
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,

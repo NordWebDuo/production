@@ -27,7 +27,7 @@ const Blogs = ({blogs}) => {
                       className="w-full h-auto rounded-3xl mb-4 shadow-md"
                       alt={blog.attributes.Title}
                     />
-                   <span className="mt-3 bg-emerald-400 text-slate-800 px-3 py-1 rounded-full text-sm">{blog.attributes.categories.data[0].attributes.title}</span>
+                   <span className="mt-3 bg-emerald-400 text-slate-800 px-3 py-1 rounded-full text-sm">{blog.attributes.category.data.attributes.title}</span>
                     <h3 className="mt-3 font-medium text-lg"> <Link href={'/blog/' + blog.attributes.slug}> {blog.attributes.Title}  </Link></h3>
                     <p className="text-slate-400 group-hover:text-slate-300 mt-2">{blog.attributes.shortDescription}</p>
                 </div>

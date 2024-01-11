@@ -60,6 +60,10 @@ body {
   @apply text-emerald-400 hover:underline underline-offset-2;
 }
 
+.description h1 {
+  @apply font-semibold mb-3 text-white
+}
+
 .description h2 {
   @apply font-bold mb-3 text-white
 }

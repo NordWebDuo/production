@@ -1,8 +1,8 @@
-import { ArrowLongRightIcon, CheckIcon, RocketLaunchIcon, StarIcon, TrophyIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
+import { ArrowLeftIcon, ArrowLongRightIcon, ArrowRightIcon, BoltIcon, CheckIcon, RocketLaunchIcon, StarIcon, TrophyIcon } from "@heroicons/react/24/outline";
 import NoData from "../NoData";
 import { useState, useEffect } from "react";
 import axios from 'axios';
+import DefaultButton from "./buttons/DefaultButton";
 
 function PackageList() {
     const [data, setData] = useState(null);
@@ -74,12 +74,13 @@ function PackageList() {
                   </ul>
                 </div>
                 <div className="call-btn mt-6">
-                  <Link href="/get-started">
-                    <div className="inline-flex items-center gap-1 border-2 text-emerald-400 group-hover:text-stone-900 border-emerald-400 group-hover:bg-emerald-500 transition-colors font-medium rounded-full lg:text-md max-lg:text-sm px-6 max-lg:px-4 max-lg:py-2 py-3">
-                      Get Started
-                      <ArrowLongRightIcon className="w-6 h-6" />
-                    </div>
-                  </Link>
+                <DefaultButton
+                Source={"/contact"}
+                Title={"Get Started"}
+                Icon={ArrowRightIcon}
+                iconPosition="right"
+                color="bordered"
+              />
                 </div>
               </div>
               );

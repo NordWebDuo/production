@@ -6,7 +6,7 @@ import SidebarMobile from './SidebarMenu';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import DefaultButton from './widgets/buttons/DefaultButton';
-import { ChatBubbleBottomCenterIcon, ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/react/24/outline';
+import { ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/react/24/outline';
 
 
 function Header() {
@@ -67,8 +67,8 @@ function Header() {
       <li className={isLinkActive('/portfolio')}>
         <Link href="/portfolio">Portfolio</Link>
       </li>
-      <li className={isLinkActive('/services')}>
-        <Link href="/services">Services</Link>
+      <li className={isLinkActive('/#packages')}>
+        <Link href="/#packages">Packages</Link>
       </li>
       <li className={isLinkActive('/blog')}>
         <Link href="/blog">Blog</Link>

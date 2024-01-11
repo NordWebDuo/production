@@ -190,7 +190,7 @@ function HomePage() {
 
             </div>
 
-          <div className="packages-selection mt-28 max-md:mt-10">
+          <div className="packages-selection mt-28 max-md:mt-10" id="packages">
            
           <HeadingTitle 
             subtitle="Irresistible Offers"
