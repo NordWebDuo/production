@@ -25,7 +25,7 @@ function HomePage() {
                 <span className="ml-4 text-sm">Cool Designs, Hot results</span>
               </div>
             <h1 className="xl:leading-tight text-white lg:leading-tight md:leading-tight mt-4 lg:text-5xl max-lg:text-3xl font-semibold">
-              We are Digital Creative<br></br> Web Agency
+              We are Digital Creative<br></br> Web Agency.
             </h1>
             <div className="mb-10">
               <p className="leading-7 pt-5 mb-10 max-lg:mb-5 text-slate-300">
