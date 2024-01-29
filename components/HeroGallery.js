@@ -31,23 +31,23 @@ function HerroGallery() {
       modules={[Autoplay]}
       className="mySwiper lg:h-[500px] md:h-[400px] h-[300px] w-full">
       <SwiperSlide>
-        <Image className='w-full h-full  rounded-2xl' src="/hero-carousel/Motion1.jpg" width={375} height={400} alt='Nord Web Duo' />
+        <Image className='w-full h-full  rounded-2xl' src="https://app.nordwebduo.com/uploads/Motion1_946df6c7ca.jpg" width={375} height={400} alt='Nord Web Duo' />
       </SwiperSlide>
       <SwiperSlide>
-      <Image className='w-full h-full rounded-2xl' src="/hero-carousel/Motion2.jpg" width={375} height={400} alt='Nord Web Duo' />
+      <Image className='w-full h-full rounded-2xl' src="https://app.nordwebduo.com/uploads/Motion2_d2521162a0.jpg" width={375} height={400} alt='Nord Web Duo' />
     </SwiperSlide>
     <SwiperSlide>
-    <Image className='w-full h-full rounded-2xl' src="/hero-carousel/Motion3.jpg" width={375} height={400} alt='Nord Web Duo' /> 
+    <Image className='w-full h-full rounded-2xl' src="https://app.nordwebduo.com/uploads/Motion5_e125fbe87d.jpg" width={375} height={400} alt='Nord Web Duo' /> 
     </SwiperSlide>
     <SwiperSlide>
-    <Image className='w-full h-full rounded-2xl' src="/hero-carousel/Motion4.jpg" width={375} height={400} alt='Nord Web Duo' />
+    <Image className='w-full h-full rounded-2xl' src="https://app.nordwebduo.com/uploads/Motion3_c2dc0672c7.jpg" width={375} height={400} alt='Nord Web Duo' />
     </SwiperSlide>
     <SwiperSlide>
-    <Image className='w-full h-full rounded-2xl' src="/hero-carousel/Motion5.jpg" width={375} height={400} alt='Nord Web Duo' />
+    <Image className='w-full h-full rounded-2xl' src="https://app.nordwebduo.com/uploads/Motion4_c98fdf6189.jpg" width={375} height={400} alt='Nord Web Duo' />
     </SwiperSlide>
 
     <SwiperSlide>
-    <Image className='w-full h-full rounded-2xl' src="/hero-carousel/Motion6.jpg" width={375} height={500} alt='Nord Web Duo' />
+    <Image className='w-full h-full rounded-2xl' src="https://app.nordwebduo.com/uploads/Motion6_14cec5fb73.jpg" width={375} height={500} alt='Nord Web Duo' />
     </SwiperSlide>
       
     </Swiper>
@@ -73,24 +73,24 @@ function HerroGallery() {
       loop={true}
       modules={[Autoplay]}
       className="mySwiper lg:h-[500px] xl:h-[500px] h-[300px] md:h-[400px] w-full">
-           <SwiperSlide>
-        <Image className='w-full h-full  rounded-2xl' src="/hero-carousel/Motion1.jpg" width={375} height={400} alt='Nord Web Duo' />
+         <SwiperSlide>
+        <Image className='w-full h-full  rounded-2xl' src="https://app.nordwebduo.com/uploads/Motion1_946df6c7ca.jpg" width={375} height={400} alt='Nord Web Duo' />
       </SwiperSlide>
       <SwiperSlide>
-      <Image className='w-full h-full rounded-2xl' src="/hero-carousel/Motion2.jpg" width={375} height={400} alt='Nord Web Duo' />
+      <Image className='w-full h-full rounded-2xl' src="https://app.nordwebduo.com/uploads/Motion2_d2521162a0.jpg" width={375} height={400} alt='Nord Web Duo' />
     </SwiperSlide>
     <SwiperSlide>
-    <Image className='w-full h-full rounded-2xl' src="/hero-carousel/Motion3.jpg" width={375} height={400} alt='Nord Web Duo' /> 
+    <Image className='w-full h-full rounded-2xl' src="https://app.nordwebduo.com/uploads/Motion5_e125fbe87d.jpg" width={375} height={400} alt='Nord Web Duo' /> 
     </SwiperSlide>
     <SwiperSlide>
-    <Image className='w-full h-full rounded-2xl' src="/hero-carousel/Motion4.jpg" width={375} height={400} alt='Nord Web Duo' />
+    <Image className='w-full h-full rounded-2xl' src="https://app.nordwebduo.com/uploads/Motion3_c2dc0672c7.jpg" width={375} height={400} alt='Nord Web Duo' />
     </SwiperSlide>
     <SwiperSlide>
-    <Image className='w-full h-full rounded-2xl' src="/hero-carousel/Motion5.jpg" width={375} height={400} alt='Nord Web Duo' />
+    <Image className='w-full h-full rounded-2xl' src="https://app.nordwebduo.com/uploads/Motion4_c98fdf6189.jpg" width={375} height={400} alt='Nord Web Duo' />
     </SwiperSlide>
 
     <SwiperSlide>
-    <Image className='w-full h-full rounded-2xl' src="/hero-carousel/Motion6.jpg" width={375} height={500} alt='Nord Web Duo' />
+    <Image className='w-full h-full rounded-2xl' src="https://app.nordwebduo.com/uploads/Motion6_14cec5fb73.jpg" width={375} height={500} alt='Nord Web Duo' />
     </SwiperSlide>
       
     </Swiper>

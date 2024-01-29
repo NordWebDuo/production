@@ -20,28 +20,24 @@ function BrandsCarousel() {
       }}
       loop={true}
       modules={[FreeMode, Autoplay]}
-      className="mySwiper opacity-80 hover:opacity-100 transition-all"
+      className="mySwiper opacity-80 hover:opacity-100 transition-all items-center"
     >
+
       <SwiperSlide>
-        <Image src="nextjs.svg" width={160} height={80} />
+        <Image src="https://app.nordwebduo.com/uploads/nextjs_ce6127ed25.svg" width={160} height={80} />
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <Image src="https://app.nordwebduo.com/uploads/Woocommerce_e73a517344.svg" width={160} height={80} />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="nextjs.svg" width={160} height={80} />
+        <Image src="https://app.nordwebduo.com/uploads/elementor_0eb87258af.svg" width={160} height={80} />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="nextjs.svg" width={160} height={80} />
+        <Image src="https://app.nordwebduo.com/uploads/Wordpress_fe311c4c20.svg" width={160} height={80} />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="woocommerce.svg" width={160} height={80} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image src="elementor.svg" width={160} height={80} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image src="elementor.svg" width={160} height={80} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image src="elementor.svg" width={160} height={80} />
+        <Image src="https://app.nordwebduo.com/uploads/Tailwindcss_8598b43b45.svg" width={160} height={80} />
       </SwiperSlide>
      
       </Swiper>

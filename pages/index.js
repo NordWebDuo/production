@@ -114,7 +114,7 @@ function HomePage() {
           <div className="about-us flex flex-row max-md:flex-col mt-28 max-md:mt-10 items-center">
             <div className="basis-6/12">
               <Image
-                src="/hero-pic.png"
+                src="https://app.nordwebduo.com/uploads/hero_pic_89ee693c84.png"
                 width="460"
                 height="457"
                 className="max-md:w-full mb-10 object-center"

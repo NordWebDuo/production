@@ -108,7 +108,7 @@ body {
 }
 
 .hero-section {
-  background: url('../public/hero-aurora.jpg');
+  background: url('https://app.nordwebduo.com/uploads/hero_127f4dd034.webp');
   border-image: fill 0 linear-gradient(#0003, #111827);
   opacity: 0.5;
   background-size: cover;
@@ -122,7 +122,7 @@ body {
 }
 
 .hero-section-alternative {
-  background: url('../public/hero.webp');
+  background: url('https://app.nordwebduo.com/uploads/hero_127f4dd034.webp');
   border-image: fill 0 linear-gradient(#0003, #111827);
   opacity: 0.5;
   background-size: cover;
