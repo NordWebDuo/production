@@ -3,15 +3,22 @@ import Blogs from "@/components/Blogscard";
 import Layout from "@/components/Layout";
 import TitleDesc from "@/components/PageTitle";
 import { fetcher } from "@/lib/api";
+import { useState } from "react";
 
 const BlogList = ({blogs}) => {
+
+    const [visibleBlogs, setVisibleBlogs] = useState(6);
+
+  const handleViewMore = () => {
+    setVisibleBlogs((prevVisibleBlogs) => prevVisibleBlogs + 3);
+  };
  
     if (!blogs || blogs.error) {
         return (
             <Layout pageTitle="Blog">
                 <TitleDesc 
                     Title="Our Blog"
-                    PageDescription="We use an agile approach to test assumptions and connect with the needs of your audience early and often."
+                    PageDescription="Explore our digital musings and discover the latest insights, stories, and ideas."
                 />
                 <div className="container mx-auto mt-14">
                     <p className="text-center">Oops! There was an error fetching the blog posts. Please try again later.</p>
@@ -22,10 +29,15 @@ const BlogList = ({blogs}) => {
 
     return (
 
-      <Layout pageTitle="Blog">
+      <Layout pageTitle="Blog"
+      ogPageTitle="Blog | NordWebDuo"
+      pageDescription={"Explore our digital musings and discover the latest insights, stories, and ideas."}
+      ogPageDescription={"Explore our digital musings and discover the latest insights, stories, and ideas."}
+      >
         <TitleDesc 
         Title="Our Blog"
-        PageDescription="We use an agile approach to test assumptions and connect with the needs of your audience early and often."
+        PageDescription="Explore our digital musings and discover the latest insights, stories, and ideas."
+        
         />
 
 <div className="hero-section-alternative"></div>
@@ -33,7 +45,15 @@ const BlogList = ({blogs}) => {
         <div className="container mx-auto mt-14">
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-         <Blogs blogs={blogs} />
+         
+         <Blogs blogs={blogs} visibleBlogs={visibleBlogs} />
+
+         {visibleBlogs < blogs.length && (
+          <div className="flex justify-center mt-5">
+            <ButtonBordered Title="View More" onClick={handleViewMore} />
+          </div>
+        )}
+
          </div>
          </div>
       </Layout>
@@ -42,7 +62,7 @@ const BlogList = ({blogs}) => {
 
 export default BlogList;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const reqOptions = {
         headers: {
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,

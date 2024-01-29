@@ -37,12 +37,12 @@ function Header() {
   }, []);
 
   return (
-    <nav className={`fixed w-full ${isSticky ? 'fixed z-50 top-0 start-0  sticky-nav px-6 max-md:px-0 max-md:py-2 py-3 mt-0 bg-slate-900 shadow-xl bg-opacity-50 border-opacity-10' : 'top-5 z-50'}`}>
-    <div className='container flex max-lg:px-5 items-center justify-between mx-auto '>
+    <nav className={`fixed w-full px-5 ${isSticky ? 'fixed z-50 top-0 start-0  sticky-nav max-md:py-2 py-3 mt-0 bg-slate-900 shadow-xl bg-opacity-50 border-opacity-10' : 'top-5 z-50'}`}>
+    <div className='container flex  items-center justify-between mx-auto '>
     <div className='brand'>
-       <Link href="/"> <Image src="/nord-web-duo.svg" width={`${isSticky ? '180' : '280'}`} height="80" className="max-md:w-48 transition-all" alt="Nord Web Duo" priority /></Link>
+       <Link href="/"> <Image src="/nord-web-duo.svg" sizes='100vw' width={`${isSticky ? '160' : '286'}`} height="107" className="max-md:w-48 aspect-auto h-full transition-all" alt="Nord Web Duo" priority /></Link>
         </div>
-        <div className='lg:order-2 flex gap-2'>
+        <div className='lg:order-2 xl:order-1 flex items-center gap-4 lg:gap-0'>
     <div className='call-to-action-desktop hidden sm:block'>
         <DefaultButton
                 Source={"/contact"}

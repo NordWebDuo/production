@@ -9,6 +9,7 @@ import PortfolioCarousel from "@/components/widgets/PortfolioCarousel";
 import ReviewsCarousel from "@/components/widgets/ReviewsCarousel";
 import DefaultButton from "@/components/widgets/buttons/DefaultButton";
 import PackageList from "@/components/widgets/PackageList";
+import HerroGallery from "@/components/HeroGallery";
 
 
 function HomePage() {
@@ -51,23 +52,13 @@ function HomePage() {
               </div>
             </div>
           </div>
-          <div className="flex hero-image">
-            <Image
-              src="/hero-pic.png"
-              width="460"
-              height="457"
-              className="max-md:w-3/5 object-center"
-            ></Image>
+          <div className="hero-sliders mt-20 md:mt-0 rounded-3xl">
+            <HerroGallery />
           </div>
         </div>
 
         <div className="container mx-auto mt-28 max-md:mt-10">
-          
-        <HeadingTitle 
-            subtitle="Crafting Digital Excellence"
-            title="Services Built Specifically for your Business"
-            description="Explore our diverse portfolio showcasing cutting-edge web design, development, and tailored digital strategies"
-            />
+        
           
 
           <div className="flex max-md:flex-col flex-row gap-5 pt-10">

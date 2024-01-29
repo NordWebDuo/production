@@ -6,7 +6,7 @@ function PortfolioCard({portfolio}) {
     return(
         <div key={portfolio.id} className=" group transition mb-8 ">
      <Image
-         src={'http://127.0.0.1:1337' + portfolio.attributes.cover.data.attributes.url}
+         src={`${process.env.NEXT_PUBLIC_ASSETS_URL}` + portfolio.attributes.cover.data.attributes.formats.small.url}
          width="600"
          height="400"
          className="w-full h-auto rounded-3xl mb-4 shadow-md"

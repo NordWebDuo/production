@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 
 function SidebarMobile() {
   const [isOpen, setIsOpen] = useState(false);
-  const [buttonIcon, setButtonIcon] = useState(<Bars3BottomLeftIcon className="h-6 w-6" />);
+  const [buttonIcon, setButtonIcon] = useState(<Bars3BottomLeftIcon className="h-7 w-7" />);
   const menuRef = useRef(null);
 
   const router = useRouter();
@@ -23,9 +23,9 @@ function SidebarMobile() {
     setIsOpen(!isOpen);
 
     if (isOpen) {
-      setButtonIcon(<Bars3BottomLeftIcon className="h-6 w-6" />);
+      setButtonIcon(<Bars3BottomLeftIcon className="h-7 w-7" />);
     } else {
-      setButtonIcon(<XMarkIcon className="h-6 w-6 z-50" />);
+      setButtonIcon(<XMarkIcon className="h-7 w-7 z-50" />);
     }
   };
 
@@ -36,8 +36,7 @@ function SidebarMobile() {
 
   return (
     <div className='relative z-50'>
-      {/* Butonul pentru deschiderea/închiderea meniului cu iconițe */}
-      <button onClick={toggleMenu} className=" lg:hidden mt-2 flex items-center justify-center">
+      <button onClick={toggleMenu} className=" lg:hidden flex">
         {buttonIcon}
       </button>
 
@@ -72,7 +71,6 @@ function SidebarMobile() {
         </div>
       </div>
 
-      {/* Zonă transparentă pentru închiderea meniului la click în afara meniului */}
       {isOpen && (
         <div className='fixed inset-0 black bg-opacity-50 backdrop-blur-sm z-40' onClick={closeMenu}></div>
       )}

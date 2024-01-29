@@ -10,12 +10,12 @@ const Portfolios = ({ portfolios }) => {
                   return (
                       <div key={portfolio.id} className="basis-1/3 group transition ">
                           <Image
-                              src={'http://127.0.0.1:1337' + portfolio.attributes.cover.data.attributes.url}
+                              src={`${process.env.NEXT_PUBLIC_ASSETS_URL}` + portfolio.attributes.cover.data.attributes.formats.small.url}
                               width="600"
                               height="400"
                               className="w-full h-auto rounded-3xl mb-4 shadow-md"
                               alt={portfolio.attributes.title}
-                              priority
+                       
                           />
                           <span className="mt-3 bg-emerald-400 text-slate-800 px-3 py-1 rounded-full text-sm">{portfolio.attributes.portfolio_categories.data[0].attributes.title}</span>
                           <h3 className="mt-3 font-medium text-base lg:text-xl"> <Link href={'/portfolio/' + portfolio.attributes.slug}> {portfolio.attributes.title}  </Link></h3>

@@ -88,7 +88,7 @@ if (!categories || !portfolios) {
 
 export default PortfolioList;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
     
 

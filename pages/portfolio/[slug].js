@@ -9,8 +9,9 @@ import { Navigation, Autoplay,Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import markDownToHtml from "@/lib/markDownToHtml";
 
-const PortfolioSlug = ({ portfolio }) => {
+const PortfolioSlug = ({ portfolio, description }) => {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -25,25 +26,24 @@ const PortfolioSlug = ({ portfolio }) => {
   return (
     <Layout 
     pageTitle={portfolio.attributes.title} 
-    pageDescription="Aceasta este pagina titlu"
-    metaImage={'http://127.0.0.1:1337' + portfolio.attributes.full_image.data.attributes.url}
+    pageDescription={portfolio.attributes.shortDescription}
+    metaImage={`${process.env.NEXT_PUBLIC_ASSETS_URL}` + portfolio.attributes.full_image.data.attributes.url}
     >
       
       <div className="hero-section-alternative"></div>
         <div className='container mx-auto'>
-
         <TitleDesc 
                     Title={portfolio.attributes.title}
-                    PageDescription="Aici va fi o descriere lorem ipsum dolor"
+                    PageDescription={portfolio.attributes.shortDescription}
                 />
        <div className="mt-10">
-        <Image className="rounded-3xl" src={'http://127.0.0.1:1337' + portfolio.attributes.full_image.data.attributes.url} width="2048" height="600" alt={portfolio.attributes.title} />
+        <Image className="rounded-3xl" src={`${process.env.NEXT_PUBLIC_ASSETS_URL}` + portfolio.attributes.full_image.data.attributes.url} width="2048" height="600" alt={portfolio.attributes.title} />
        <div className="flex flex-col lg:flex-row mt-10">
         <div className="lg:w-4/12 w-full mb-4">
           <h2 className="lg:text-3xl text-xl ">About the project</h2>
           </div>
         <div className="lg:w-8/12 w-full">
-        <div className="description leading-7 text-slate-400 text-base lg:text-lg" dangerouslySetInnerHTML={{__html: portfolio.attributes.description}} />
+        <div className="description leading-7 text-slate-400 text-base lg:text-lg" dangerouslySetInnerHTML={{__html: description}} />
             <div className="mt-2 inline-flex  border-2  border-emerald-400 hover:bg-emerald-400 transition-colors font-medium rounded-full">
               <a className="inline-flex text-emerald-400 hover:text-stone-900 items-center gap-2 max-lg:text-sm px-6 max-lg:px-4 max-lg:py-2 py-3" href={portfolio.attributes.website_url} target="_blank"> Visit Website <ArrowUpRightIcon className="w-5 h-5" /> </a>
             </div>
@@ -86,7 +86,7 @@ modules={[Navigation,Autoplay,Pagination]}>
           
             <Image
               className="rounded-3xl mb-12"
-              src={'http://127.0.0.1:1337' + image.attributes.url}
+              src={`${process.env.NEXT_PUBLIC_ASSETS_URL}` + image.attributes.formats.medium.url}
               alt={image.attributes.name}
               width={image.attributes.width}
               height={image.attributes.height}
@@ -128,9 +128,14 @@ export async function getServerSideProps({ params }) {
       return { notFound: true };
     }
 
+    const description = await markDownToHtml(
+      portfolioResponse.data.attributes.description
+    );
+
     return {
       props: {
         portfolio: portfolioResponse.data,
+        description,
       },
     };
   } catch (error) {
