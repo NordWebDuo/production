@@ -22,7 +22,7 @@ function HomePage() {
         <div className="hero-section"></div>
           <div className="description basis-1/2 max-lg:basis-9/12 ">
           <div className="relative -z-[1] heading-subtitle inline-block bg-emerald-400 bg-opacity-10 px-3 py-1 rounded-full text-white mb-1">
-                <span className="ml-4 text-sm">Cool Designs, Hot results.</span>
+                <span className="ml-4 text-sm">Cool Designs, Hot results</span>
               </div>
             <h1 className="xl:leading-tight text-white lg:leading-tight md:leading-tight mt-4 lg:text-5xl max-lg:text-3xl font-semibold">
               We are Digital Creative<br></br> Web Agency
