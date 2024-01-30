@@ -11,10 +11,14 @@ import {
 
 function Contact() {
   return (
-    <Layout pageTitle={"Contact Us"} ogPageTitle={"Contact Us"}>
+    <Layout pageTitle={"Contact Us"} 
+    ogPageTitle={"Contact Us | NordWebDuo"}
+    pageDescription={"Get in Touch with Us: Customer Support and Service Inquiries"}
+    ogUrl={`https://www.nordwebduo.com/contact`}
+    >
       <TitleDesc
         Title="Contact Us"
-        PageDescription="We are a dynamic team comprised of talented designers, developers, and marketing experts."
+        PageDescription="Get in Touch with Us: Customer Support and Service Inquiries"
       />
 
       <div className="hero-section-alternative"></div>
@@ -81,9 +85,9 @@ function Contact() {
                       viewBox="0 0 8 19"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       />
                     </svg>
                   </a>
@@ -92,7 +96,7 @@ function Contact() {
                     className="social-icon bg-slate-800 group transition-colors hover:bg-emerald-400 p-3 rounded-full"
                   >
                     <svg className="w-4 h-4 text-white group-hover:text-emerald-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 15 15">
-    <path fill-rule="evenodd" d="M7.979 5v1.586a3.5 3.5 0 0 1 3.082-1.574C14.3 5.012 15 7.03 15 9.655V15h-3v-4.738c0-1.13-.229-2.584-1.995-2.584-1.713 0-2.005 1.23-2.005 2.5V15H5.009V5h2.97ZM3 2.487a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" clip-rule="evenodd"/>
+    <path fillRule="evenodd" d="M7.979 5v1.586a3.5 3.5 0 0 1 3.082-1.574C14.3 5.012 15 7.03 15 9.655V15h-3v-4.738c0-1.13-.229-2.584-1.995-2.584-1.713 0-2.005 1.23-2.005 2.5V15H5.009V5h2.97ZM3 2.487a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" clipRule="evenodd"/>
     <path d="M3 5.012H0V15h3V5.012Z"/>
   </svg>
     

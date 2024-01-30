@@ -29,6 +29,7 @@ const BlogSlug = ({ blog, description }) => {
             pageDescription={blog.attributes.seo.metaDescription}
             metaImage={`${process.env.NEXT_PUBLIC_ASSETS_URL}` + blog.attributes.cover.data.attributes.formats.small.url}
             metaKeywords={blog.attributes.seo.keywords}
+            ogUrl={`https://www.nordwebduo.com/blog/${blog.attributes.slug}`}
     >
       <div className="hero-section-alternative"></div>
 

@@ -18,7 +18,11 @@ const handleViewMore = () => {
 
 if (!categories || !portfolios) {
     return (
-        <Layout pageTitle="Our Works">
+        <Layout pageTitle="Our Works"
+        ogPageTitle="Portfolio | NordWebDuo"
+        pageDescription="People friendly digital experiences"
+        ogUrl={`https://www.nordwebduo.com/portfolio`}
+        >
         <TitleDesc 
             Title="Our Works"
             PageDescription="We use an agile approach to test assumptions and connect with the needs of your audience early and often."
@@ -49,8 +53,9 @@ if (!categories || !portfolios) {
     return (
         <Layout 
         pageTitle="Portfolio"
-        pageDescription="Aceasta este pagina titlu"
         ogPageTitle="Portfolio | NordWebDuo"
+        pageDescription="People friendly digital experiences"
+        ogUrl={`https://www.nordwebduo.com/portfolio`}
         >
 
 <div className="hero-section-alternative"></div>

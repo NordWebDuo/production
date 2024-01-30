@@ -33,7 +33,8 @@ const BlogList = ({blogs}) => {
       ogPageTitle="Blog | NordWebDuo"
       pageDescription={"Explore our digital musings and discover the latest insights, stories, and ideas."}
       ogPageDescription={"Explore our digital musings and discover the latest insights, stories, and ideas."}
-      >
+    ogUrl={`https://www.nordwebduo.com/blog`}
+    >
         <TitleDesc 
         Title="Our Blog"
         PageDescription="Explore our digital musings and discover the latest insights, stories, and ideas."
