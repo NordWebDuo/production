@@ -10,8 +10,8 @@ function BrandsCarousel() {
         <>
         <div className='brandscarousel'>
            <Swiper
-      spaceBetween={20}
-      slidesPerView={4}
+    slidesPerView={4}
+    spaceBetween={30}
       speed={7000}
       freeMode={true}
       autoplay={{
@@ -38,6 +38,9 @@ function BrandsCarousel() {
       </SwiperSlide>
       <SwiperSlide>
         <Image src="https://app.nordwebduo.com/uploads/Tailwindcss_8598b43b45.svg" width={160} height={80} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src="https://app.nordwebduo.com/uploads/flowbite_ead30cef3b.svg" width={160} height={80} />
       </SwiperSlide>
      
       </Swiper>

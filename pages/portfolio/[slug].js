@@ -26,8 +26,10 @@ const PortfolioSlug = ({ portfolio, description }) => {
   return (
     <Layout 
     pageTitle={portfolio.attributes.title} 
+    ogPageTitle={`${portfolio.attributes.title}` + " | NordWebDuo"}
     pageDescription={portfolio.attributes.shortDescription}
     metaImage={`${process.env.NEXT_PUBLIC_ASSETS_URL}` + portfolio.attributes.full_image.data.attributes.url}
+    ogUrl={`https://www.nordwebduo.com/portfolio/${portfolio.attributes.slug}`}
     >
       
       <div className="hero-section-alternative"></div>

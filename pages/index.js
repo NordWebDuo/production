@@ -11,7 +11,6 @@ import DefaultButton from "@/components/widgets/buttons/DefaultButton";
 import PackageList from "@/components/widgets/PackageList";
 import HerroGallery from "@/components/HeroGallery";
 
-
 function HomePage() {
   return (
     <Layout>
@@ -111,7 +110,7 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="about-us flex flex-row max-md:flex-col mt-28 max-md:mt-10 items-center">
+          <div className="about-us flex flex-row max-md:flex-col mt-28 max-md:mt-16 items-center">
             <div className="basis-6/12">
               <Image
                 src="https://app.nordwebduo.com/uploads/hero_pic_89ee693c84.png"
@@ -170,7 +169,7 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="porftolio-selection mt-28 max-md:mt-10">
+          <div className="porftolio-selection mt-28 max-md:mt-16">
             <HeadingTitle 
             subtitle="Crafting Digital Excellence"
             title="Our Works"
@@ -181,7 +180,7 @@ function HomePage() {
 
             </div>
 
-          <div className="packages-selection mt-28 max-md:mt-10" id="packages">
+          <div className="packages-selection mt-28 max-md:mt-8" id="packages">
            
           <HeadingTitle 
             subtitle="Irresistible Offers"
@@ -193,7 +192,7 @@ function HomePage() {
 
           </div>
            
-          <div className="packages-selection mt-28 max-md:mt-10">
+          <div className="packages-selection mt-28 max-md:mt-16">
           <HeadingTitle 
             subtitle="Our happy Clients"
             title="Testimonials"
