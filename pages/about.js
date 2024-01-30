@@ -13,7 +13,8 @@ function About() {
   return (
     <Layout
       pageTitle="About Us"
-      pageDescription="Aceasta este pagina titlu"
+      pageDescription="We are a dynamic team comprised of talented designers, developers, and marketing experts."
+      ogUrl={"https://www.nordwebduo.com/about"}
       ogPageTitle="About Us | NordWebDuo"
     >
       <div className="hero-section-alternative"></div>
