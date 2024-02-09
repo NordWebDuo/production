@@ -1,4 +1,5 @@
-import HeadingTitle from "@/components/HeadingTitle";
+"use client"
+
 import HerroGallery from "@/components/HeroGallery";
 import Layout from "@/components/Layout";
 import TitleDesc from "@/components/PageTitle";
@@ -35,7 +36,7 @@ function About() {
               <div className="relative -z-[1] heading-subtitle inline-block bg-emerald-400 bg-opacity-10 px-3 py-1 rounded-full text-white mb-5">
                 <span className="ml-4 text-sm">About Us</span>
               </div>
-              <h1 className="mb-3 text-emerald-400 font-semibold">
+              <h1 className="mb-3 text-emerald-400 text-2xl font-semibold">
                 Who We Are
               </h1>
               <div className="mt-6 mb-10 leading-7">
@@ -72,7 +73,7 @@ function About() {
               />
             </div>
           </div>
-         <div className="mb-20 mt-20">
+         <div className="mb-10 mt-10 md:mt-20 md:mb-20">
           <BrandsCarousel />
           </div>
 
@@ -84,7 +85,7 @@ function About() {
             <StatCard endValue={4} title={"Team members"} />
           </div>
 
-         <div className="text-3xl mt-20">Our Values</div>
+         <div className="text-2xl lg:text-3xl text-center mt-20">Our Values</div>
 
           <div className="values grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
             <CardText
@@ -121,10 +122,10 @@ function About() {
           </div>
 
           
-          <div className="text-3xl mt-20">Our Works</div>
-          
+          <div className="text-2xl lg:text-3xl text-center mt-20">Our Works</div>
+          <div className="latest-works -mb-20">
             <PortfolioCarousel />
-        
+            </div>
         </div>
       </div>
     </Layout>

@@ -43,7 +43,7 @@ const ReviewsCarousel = () => {
           <ChatBubbleBottomCenterTextIcon className='w-10 h-10 text-emerald-400 mb-4' />
           <p className='italic leading-7'>“ {review.attributes.review} „</p>
           <div className='bottom-info mt-5 flex items-center gap-5'>
-          <Image src={`${process.env.NEXT_PUBLIC_ASSETS_URL}` + review.attributes.avatar.data.attributes.url } width={60} height={60} className='rounded-full border-2 border-emerald-400' />
+          <Image src={`${process.env.NEXT_PUBLIC_ASSETS_URL}` + review.attributes.avatar.data.attributes.url } width={60} height={60} className='rounded-full border-2 border-emerald-400' alt={review.attributes.author} />
          
          <div className='author-details'>
           <h2 className='text-base font-semibold text-emerald-400'>{review.attributes.author}  <CheckBadgeIcon className='w-5 h-5 inline text-emerald-400' /></h2>

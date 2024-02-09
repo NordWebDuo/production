@@ -1,1 +1,1 @@
-{"version":1,"functions":{"/blog":{},"/portfolio/[slug]":{},"/blog/[slug]":{},"/portfolio":{}}}
+{"version":1,"functions":{"/blog":{},"/portfolio":{},"/portfolio/[slug]":{},"/blog/[slug]":{}}}

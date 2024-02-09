@@ -1,52 +1,89 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { FreeMode,Autoplay } from 'swiper/modules';
-import Image from 'next/image';
-
-import 'swiper/css/free-mode';
+import Image from "next/image";
+import "swiper/css/free-mode";
 
 function BrandsCarousel() {
-    return(
-        <>
-        <div className='brandscarousel'>
-           <Swiper
-    slidesPerView={4}
-    spaceBetween={30}
-      speed={7000}
-      freeMode={true}
-      autoplay={{
-        delay: 1,
-        disableOnInteraction: false,
-      }}
-      loop={true}
-      modules={[FreeMode, Autoplay]}
-      className="mySwiper opacity-80 hover:opacity-100 transition-all items-center"
-    >
-
-      <SwiperSlide>
-        <Image src="https://app.nordwebduo.com/uploads/nextjs_ce6127ed25.svg" width={160} height={80} />
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <Image src="https://app.nordwebduo.com/uploads/Woocommerce_e73a517344.svg" width={160} height={80} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image src="https://app.nordwebduo.com/uploads/elementor_0eb87258af.svg" width={160} height={80} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image src="https://app.nordwebduo.com/uploads/Wordpress_fe311c4c20.svg" width={160} height={80} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image src="https://app.nordwebduo.com/uploads/Tailwindcss_8598b43b45.svg" width={160} height={80} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image src="https://app.nordwebduo.com/uploads/flowbite_ead30cef3b.svg" width={160} height={80} />
-      </SwiperSlide>
-     
-      </Swiper>
+  return (
+    <>
+      <div className="flex overflow-x-hidden brandscarousel gap-7">
+        <div className="flex  shrink-0 carousel-default gap-2">
+          <Image
+            src="https://app.nordwebduo.com/uploads/brand1_bafd0519d8.png"
+            width={228}
+            height={78}
+            alt="TailwindCSS"
+          />
+          <Image
+            src="https://app.nordwebduo.com/uploads/brand2_1035e73ff1.png"
+            width={228}
+            height={78}
+            alt="Flowbite React"
+          />
+          <Image
+            src="https://app.nordwebduo.com/uploads/brand3_d5cf0695b0.png"
+            width={228}
+            height={78}
+            alt="Elementor"
+          />
+          <Image
+            src="https://app.nordwebduo.com/uploads/brand5_883f402dc3.png"
+            width={228}
+            height={78}
+            alt="Wordpress"
+          />
+          <Image
+            src="https://app.nordwebduo.com/uploads/brand4_ee28c708d0.png"
+            width={228}
+            height={78}
+            alt="Woocommerce"
+          />
+          <Image
+            src="https://app.nordwebduo.com/uploads/brand6_9ed17cc6e3.png"
+            width={228}
+            height={78}
+            alt="Next.JS"
+          />
+        </div>
+        <div className="flex carousel-default shrink-0 gap-3">
+        <Image
+            src="https://app.nordwebduo.com/uploads/brand1_bafd0519d8.png"
+            width={228}
+            height={78}
+            alt="TailwindCSS"
+          />
+          <Image
+            src="https://app.nordwebduo.com/uploads/brand2_1035e73ff1.png"
+            width={228}
+            height={78}
+            alt="Flowbite React"
+          />
+          <Image
+            src="https://app.nordwebduo.com/uploads/brand3_d5cf0695b0.png"
+            width={228}
+            height={78}
+            alt="Elementor"
+          />
+          <Image
+            src="https://app.nordwebduo.com/uploads/brand5_883f402dc3.png"
+            width={228}
+            height={78}
+            alt="Wordpress"
+          />
+          <Image
+            src="https://app.nordwebduo.com/uploads/brand4_ee28c708d0.png"
+            width={228}
+            height={78}
+            alt="Woocommerce"
+          />
+          <Image
+            src="https://app.nordwebduo.com/uploads/brand6_9ed17cc6e3.png"
+            width={228}
+            height={78}
+            alt="Next.JS"
+          />
+        </div>
       </div>
-        </>
-    )
+    </>
+  );
 }
 
 export default BrandsCarousel;

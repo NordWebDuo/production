@@ -33,7 +33,7 @@ const BlogSlug = ({ blog, description }) => {
     >
       <div className="hero-section-alternative"></div>
 
-      <div className="container mt-10 mx-auto">
+      <div className="container xl:w-[900px] mt-10 mx-auto">
         <div className="blog-desc mb-10 flex flex-col justify-center">
           <div className="text-2xl md:text-3xl font-medium mb-4">
             {blog.attributes.Title}
@@ -56,15 +56,11 @@ const BlogSlug = ({ blog, description }) => {
         </div>
 
        <Image src={`${process.env.NEXT_PUBLIC_ASSETS_URL}` + blog.attributes.cover.data.attributes.url} width="600" height="400" className="w-full h-auto rounded-3xl mb-8 shadow-md" alt={blog.attributes.title} />
-      <div className="flex">
-        <div className="basis-9/12">
-        <div
+           <div
           className="description leading-7 text-slate-400"
           dangerouslySetInnerHTML={{ __html: description }}
         />
-        </div>
-        </div>
-      </div>
+     </div>
     </Layout>
   );
 };

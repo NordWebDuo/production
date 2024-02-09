@@ -17,18 +17,20 @@ function HomePage() {
     <div className="main">
       <div className="all">
       
-        <div className="container gap-20 md:flex flex-row items-center mx-auto z-auto"> 
+        <div className="container gap-0 lg:gap-20 grid grid-cols-1 lg:grid-cols-2 items-center mx-auto z-auto"> 
         <div className="hero-section"></div>
-          <div className="description basis-1/2 max-lg:basis-9/12 ">
+          <div className="mb-14 md:mb-0 ">
           <div className="relative -z-[1] heading-subtitle inline-block bg-emerald-400 bg-opacity-10 px-3 py-1 rounded-full text-white mb-1">
                 <span className="ml-4 text-sm">Cool Designs, Hot results</span>
               </div>
-            <h1 className="xl:leading-tight text-white lg:leading-tight md:leading-tight mt-4 lg:text-5xl max-lg:text-3xl font-semibold">
-              We are Digital Creative<br></br> Web Agency
+              <div className="">
+            <h1 className="mt-4 leading-10 lg:leading-tight lg:text-5xl max-lg:text-3xl font-semibold">
+              We are Digital Creative Web Agency
             </h1>
+            </div>
             <div className="mb-10">
-              <p className="leading-7 pt-5 mb-10 max-lg:mb-5 text-slate-300">
-                Innovative digital agency that specializes in creating high-quality websites and digital marketing strategies designed to drive engagement and increase conversions.
+              <p className="leading-7 pt-3 max-lg:mb-5 text-slate-300">
+                Innovative digital agency that specializes in creating high-quality websites and digital marketing strategies.
               </p>
               <div className="flex gap-5 mt-8">
               <DefaultButton
@@ -51,17 +53,15 @@ function HomePage() {
               </div>
             </div>
           </div>
-          <div className="hero-sliders mt-20 md:mt-0 rounded-3xl">
+          <div className="hero-sliders relative">
             <HerroGallery />
           </div>
         </div>
 
-        <div className="container mx-auto mt-28 max-md:mt-10">
-        
-          
+        <div className="container mx-auto mt-10 md:mt-8 lg:mt-28">
 
           <div className="flex max-md:flex-col flex-row gap-5 pt-10">
-            <div className="basis-4/12 group">
+            <div className="basis-4/12 md:basis-auto group">
               <div className="card p-6 rounded-3xl bg-slate-800 hover:bg-emerald-400 hover:text-stone-900 transition-colors">
                 <CommandLineIcon className="w-12 h-12 text-emerald-400 group-hover:text-stone-900" />
                 <div className="card-title mt-3">
@@ -77,7 +77,7 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="basis-4/12 group">
+            <div className="basis-4/12 md:basis-auto group">
               <div className="card p-6 rounded-3xl bg-slate-800 hover:bg-emerald-400 hover:text-stone-900 transition-colors">
                 <RectangleGroupIcon className="w-12 h-12 text-emerald-400 group-hover:text-stone-900" />
                 <div className="card-title mt-3">
@@ -93,7 +93,7 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="basis-4/12 group">
+            <div className="basis-4/12 md:basis-auto group">
               <div className="card p-6 rounded-3xl bg-slate-800 hover:bg-emerald-400 hover:text-stone-900 transition-colors">
                 <PuzzlePieceIcon className="w-12 h-12 text-emerald-400 group-hover:text-stone-900" />
                 <div className="card-title mt-3">

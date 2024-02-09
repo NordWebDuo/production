@@ -43,9 +43,10 @@ function PortfolioCarousel() {
   return (
     <Swiper
       className="mt-10 lg:mt-10 mySwiper"
-      spaceBetween={30}
+      spaceBetween={20}
       pagination={{ clickable: true }}
       autoplay={{ delay: 2500, disableOnInteraction: false }}
+      slidesPerView={2}
       breakpoints={{
         640: { slidesPerView: 2, spaceBetween: 20 },
         768: { slidesPerView: 2, spaceBetween: 20 },

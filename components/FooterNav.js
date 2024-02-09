@@ -133,7 +133,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div className="basis-4/12 max-md:basis-full">
+            <div className="basis-4/12 ">
                 <div className="footer-title font-medium text-md">Contacts</div>
                 <div className="package-list mt-4">
                   <ul className="list-none text-base">

@@ -18,6 +18,7 @@ const Layout = ({ children, pageTitle, pageDescription, ogPageTitle,metaImage,me
         <meta property="og:url" content={ogUrl ? ogUrl : 'https://www.nordwebduo.com'} /> 
         <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://app.nordwebduo.com/uploads/favicon_32x32_88df5d0db5.png" />
     </Head>
     <Header />
     <main>
