@@ -61,8 +61,8 @@ function Header() {
       <li className={isLinkActive('/')}>
         <Link href="/">Home</Link>
       </li>
-      <li className={isLinkActive('/about')}>
-        <Link href="/about">About Us</Link>
+      <li className={isLinkActive('/about-us')}>
+        <Link href="/about-us">About Us</Link>
       </li>
       <li className={isLinkActive('/portfolio')}>
         <Link href="/portfolio">Portfolio</Link>

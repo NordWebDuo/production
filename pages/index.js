@@ -117,6 +117,7 @@ function HomePage() {
                 width="460"
                 height="457"
                 className="max-md:w-full mb-10 object-center"
+                alt="About Us"
               ></Image>
             </div>
             <div className="basis-6/12">
