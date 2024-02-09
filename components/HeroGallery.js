@@ -16,24 +16,24 @@ function HerroGallery() {
       <div className="flow-1 flex flex-col gap-5">
       <div className="carousel-vertical flex flex-col gap-5">
         {images.map((image, index) => (
-          <Image key={index} src={image.src} width={image.width} height={image.height} alt={image.alt} />
+          <Image key={index} src={image.src} width={image.width} height={image.height} alt={image.alt} priority />
         ))}
       </div>
       <div className="carousel-vertical flex flex-col gap-5">
         {images.map((image, index) => (
-          <Image key={index} src={image.src} width={image.width} height={image.height} alt={image.alt} />
+          <Image key={index} src={image.src} width={image.width} height={image.height} alt={image.alt} priority />
         ))}
       </div>
       </div>
       <div className="flow-2 flex flex-col gap-5">
       <div className="carousel-vertical-down flex flex-col gap-5">
         {images.map((image, index) => (
-          <Image key={index} src={image.src} width={image.width} height={image.height} alt={image.alt} />
+          <Image key={index} src={image.src} width={image.width} height={image.height} alt={image.alt} priority />
         ))}
       </div>
       <div className="carousel-vertical-down flex flex-col gap-5">
         {images.map((image, index) => (
-          <Image key={index} src={image.src} width={image.width} height={image.height} alt={image.alt} />
+          <Image key={index} src={image.src} width={image.width} height={image.height} alt={image.alt} priority />
         ))}
       </div>
       </div>

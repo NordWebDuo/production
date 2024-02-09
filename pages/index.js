@@ -149,8 +149,8 @@ function HomePage() {
                 </div>
                 <div className="mt-8 flex gap-3">
                 <DefaultButton
-                Source={"/about"}
-                Title={"Read More"}
+                Source={"/about-us"}
+                Title={"Learn more About Us"}
                 Icon={ArrowUpRightIcon}
                 color="default"
                 iconPosition="right"
