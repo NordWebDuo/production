@@ -10,17 +10,23 @@ const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
-  createServer(async (req, res) => {
+  createServer((req, res) => {
     try {
       const parsedUrl = parse(req.url, true)
       const { pathname, query } = parsedUrl
 
+      // Check if the request is already HTTPS and www is present or not
+      if (!req.headers.host.match(/^www\./) && process.env.NODE_ENV === 'production') {
+        res.writeHead(301, { Location: `https://www.${hostname}${req.url}` })
+        return res.end()
+      }
+
       if (pathname === '/a') {
-        await app.render(req, res, '/a', query)
+        app.render(req, res, '/a', query)
       } else if (pathname === '/b') {
-        await app.render(req, res, '/b', query)
+        app.render(req, res, '/b', query)
       } else {
-        await handle(req, res, parsedUrl)
+        handle(req, res, parsedUrl)
       }
     } catch (err) {
       console.error('Error occurred handling', req.url, err)
